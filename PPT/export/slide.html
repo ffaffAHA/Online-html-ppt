@@ -107,137 +107,513 @@
 <section class="slide level1">
 
 <!-- slide -->
-<p>% 安装 % Kiwi % Feb 2025</p>
+<p>% Markdown制作幻灯片 % Kiwi % Feb 2025</p>
+<!-- slide -->
+<p>% 目录 % Kiwi % Feb 2025 [toc]</p>
+<!-- slide -->
 </section>
-<section id="速览" class="slide level1">
-<h1>速览：</h1>
+<section id="环境准备" class="slide level1">
+<h1>环境准备</h1>
+<blockquote>
+<p><code>vscode + EMP + pandoc 3.5 + pandoc-crossref</code></p>
+</blockquote>
+</section>
+<section id="基本语法" class="slide level1">
+<h1>基本语法</h1>
+<p>% 这个标题拥有 1 个 id {#my_id} % Kiwi % Feb 2025</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>% 这个标题拥有 1 个 id {#my_id}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span></code></pre></div>
+<p>% 这个标题有 2 个 classes {.class1 .class2} % Kiwi % Feb 2025</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>% 这个标题有 2 个 classes {.class1 .class2}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span></code></pre></div>
+<!-- slide -->
+</section>
+<section id="代码实例" class="slide level1">
+<h1>代码实例</h1>
+<pre><code>*这会是 斜体 的文字*
+_这会是 斜体 的文字_
+**这会是 粗体 的文字**
+__这会是 粗体 的文字__
+
+_你也 **组合** 这些符号_
+
+~~这个文字将会被横线删除~~</code></pre>
+</section>
+<section id="结果输出" class="slide level1">
+<h1>结果输出</h1>
+<p><em>这会是 斜体 的文字</em> <em>这会是 斜体 的文字</em>
+<strong>这会是 粗体 的文字</strong> <strong>这会是 粗体
+的文字</strong></p>
+<p><em>你也 <strong>组合</strong> 这些符号</em></p>
+<p><del>这个文字将会被横线删除</del></p>
+<!-- slide -->
+<p>上标：X<sub>2</sub>，下标：O<sup>2</sup>
+<strong>缩写(同HTML的abbr标签)</strong></p>
+<blockquote>
+<p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
+</blockquote>
+<!-- slide -->
+<h2 id="引用-blockquotes">引用 Blockquotes</h2>
+<blockquote>
+<p>引用文本 Blockquotes</p>
+</blockquote>
+<p>引用的行内混合 Blockquotes</p>
+<blockquote>
+<p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可</p>
+</blockquote>
+<!-- slide -->
+<h2 id="锚点与链接-links">锚点与链接 Links</h2>
+<p><a href="http://baidu.com/">普通链接</a></p>
+<p><a href="http://baidu.com/"
+title="普通链接带标题">普通链接带标题</a></p>
+<p>直接链接：&lt;https: //github.com&gt;</p>
+<!-- [锚点链接][anchor-id] -->
+<!-- [anchor-id]: http://www.this-anchor-link.com/ -->
+<!-- [mailto:test.test@gmail.com](mailto:test.test@gmail.com) -->
+<p>GFM a-tail link <span class="citation"
+data-cites="pandao">@pandao</span> 邮箱地址自动链接 test.test@gmail.com
+www@vip.qq.com</p>
+<blockquote>
+<p><span class="citation" data-cites="pandao">@pandao</span>
+<!-- slide --> ## 多语言代码高亮 Codes</p>
+</blockquote>
+<h4 id="行内代码-inline-code">行内代码 Inline code</h4>
+<p>执行命令：<code>npm install marked</code></p>
+<h4 id="缩进风格">缩进风格</h4>
+<p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本
+( Preformatted Text ) 的功能。</p>
+<pre><code>&lt;?php
+    echo &quot;Hello world!&quot;;
+?&gt;</code></pre>
+<!-- slide -->
+<p>预格式化文本：</p>
+<pre><code>| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |</code></pre>
+<!-- slide -->
+</section>
+<section id="js代码" class="slide level1">
+<h1>JS代码</h1>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">test</span>() {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Hello world!&quot;</span>)<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>(<span class="kw">function</span>(){</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> box <span class="op">=</span> <span class="kw">function</span>() {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> box<span class="op">.</span><span class="at">fn</span><span class="op">.</span><span class="fu">init</span>()<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    box<span class="op">.</span><span class="at">prototype</span> <span class="op">=</span> box<span class="op">.</span><span class="at">fn</span> <span class="op">=</span> {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">init</span> <span class="op">:</span> <span class="kw">function</span>(){</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;box.init()&#39;</span>)<span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">add</span> <span class="op">:</span> <span class="kw">function</span>(str) {</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">alert</span>(<span class="st">&quot;add&quot;</span><span class="op">,</span> str)<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">remove</span> <span class="op">:</span> <span class="kw">function</span>(str) {</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>            <span class="fu">alert</span>(<span class="st">&quot;remove&quot;</span><span class="op">,</span> str)<span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    box<span class="op">.</span><span class="at">fn</span><span class="op">.</span><span class="at">init</span><span class="op">.</span><span class="at">prototype</span> <span class="op">=</span> box<span class="op">.</span><span class="at">fn</span><span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">window</span><span class="op">.</span><span class="at">box</span> <span class="op">=</span>box<span class="op">;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> testBox <span class="op">=</span> <span class="fu">box</span>()<span class="op">;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>testBox<span class="op">.</span><span class="fu">add</span>(<span class="st">&quot;jQuery&quot;</span>)<span class="op">.</span><span class="fu">remove</span>(<span class="st">&quot;jQuery&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<!-- slide -->
+</section>
+<section id="html-代码-html-codes" class="slide level1">
+<h1>HTML 代码 HTML codes</h1>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">mate</span><span class="ot"> charest</span><span class="op">=</span><span class="st">&quot;utf-8&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;keywords&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;Editor.md, Markdown, Editor&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Hello world!<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;text/css&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">color</span><span class="ch">:</span> <span class="cn">#444</span><span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-family</span><span class="ch">:</span> <span class="st">&quot;Microsoft Yahei&quot;</span><span class="op">,</span> <span class="dv">Tahoma</span><span class="op">,</span> <span class="st">&quot;Hiragino Sans GB&quot;</span><span class="op">,</span> <span class="dv">Arial</span><span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    ul {</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">list-style</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    img {</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">border</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-xxl&quot;</span><span class="dt">&gt;</span>Hello world!<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-green&quot;</span><span class="dt">&gt;</span>Plain text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<!-- slide -->
+</section>
+<section id="图片-images" class="slide level1">
+<h1>图片 Images</h1>
+<p>Image:</p>
+<h2 data-background-image="assets/2025-02-13-21-47-36-575429.jpg"
+data-background-size="contain" id="section"></h2>
+<blockquote>
+<p>Follow your heart. <!-- slide --></p>
+</blockquote>
+<h2 data-background-image="assets/2025-02-13-21-47-37-902822.jpg"
+data-background-size="contain" id="section-1"></h2>
+<blockquote>
+<p>图为：厦门白城沙滩 <!-- slide --></p>
+</blockquote>
+<p>图片加链接 (Image + Link)：</p>
+<p>[<img data-src="assets/2025-02-13-21-47-39-792583.jpg" alt="am" />]
+“李健首张专辑《似水流年》封面”</p>
+<blockquote>
+<p>图为：李健首张专辑《似水流年》封面 <!-- slide --></p>
+</blockquote>
+</section>
+<section id="列表-lists" class="slide level1">
+<h1>列表 Lists</h1>
+<h4 id="无序列表减号unordered-lists--">无序列表（减号）Unordered Lists
+(-)</h4>
+<ul>
+<li class="fragment">列表一</li>
+<li class="fragment">列表二</li>
+<li class="fragment">列表三 <!-- slide --> ## 无序列表（星号）Unordered
+Lists (*)</li>
+<li class="fragment">列表一</li>
+<li class="fragment">列表二</li>
+<li class="fragment">列表三</li>
+</ul>
+<!-- slide -->
+<h2
+id="无序列表加号和嵌套unordered-lists">无序列表（加号和嵌套）Unordered
+Lists (+)</h2>
+<ul>
+<li class="fragment">列表一</li>
+<li class="fragment">列表二
+<ul>
+<li class="fragment">列表二-1</li>
+<li class="fragment">列表二-2</li>
+<li class="fragment">列表二-3</li>
+</ul></li>
+<li class="fragment">列表三
+<ul>
+<li class="fragment">列表一</li>
+<li class="fragment">列表二</li>
+<li class="fragment">列表三</li>
+</ul></li>
+</ul>
+<!-- slide -->
+<h2 id="有序列表-ordered-lists--">有序列表 Ordered Lists (-)</h2>
 <ol type="1">
-<li class="fragment"><p>vscode 安装mark all in one、<a
-href="https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/">Markdown
-Preview Enhanced</a> 插件</p></li>
-<li class="fragment"><p>css方式二， <code>preview_theme</code> 和
-<code>prism_theme</code>
-中的<code>pepper</code>相关文件放到对应的本地文件夹中，在<code>setting.json</code>
-调用</p></li>
-<li class="fragment"><p>tocNumberHidden.less<a
-href="#/45-标题序号">按需调用</a></p></li>
+<li class="fragment">第一行</li>
+<li class="fragment">第二行</li>
+<li class="fragment">第三行</li>
 </ol>
 <!-- slide -->
-<h2 id="css">css</h2>
-<h4 id="setting.json-配置参考">setting.json 配置参考</h4>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown-preview-enhanced.previewTheme&quot;</span><span class="op">:</span> <span class="st">&quot;pepper.css&quot;</span><span class="op">,</span> <span class="co">//使用自己的css pepper.css</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown-preview-enhanced.codeBlockTheme&quot;</span><span class="op">:</span> <span class="st">&quot;pepperLight.css&quot;</span><span class="op">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown-preview-enhanced.printBackground&quot;</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">//使用自己的css打印html/pdf</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;[markdown]&quot;</span><span class="op">:</span> {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;editor.defaultFormatter&quot;</span><span class="op">:</span> <span class="st">&quot;DavidAnson.vscode-markdownlint&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown.extension.toc.levels&quot;</span><span class="op">:</span> <span class="st">&quot;2..4&quot;</span><span class="op">,</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown-preview-enhanced.enableExtendedTableSyntax&quot;</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdown-preview-enhanced.enableScriptExecution&quot;</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;markdownlint.config&quot;</span><span class="op">:</span> {</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;MD029&quot;</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;MD033&quot;</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="gfm-task-list">GFM task list</h2>
+<ul class="task-list">
+<li class="fragment"><label><input type="checkbox" checked="" />GFM task
+list 1</label></li>
+<li class="fragment"><label><input type="checkbox" checked="" />GFM task
+list 2</label></li>
+<li class="fragment"><label><input type="checkbox" />GFM task list
+3</label>
+<ul class="task-list">
+<li class="fragment"><label><input type="checkbox" />GFM task list
+3-1</label></li>
+<li class="fragment"><label><input type="checkbox" />GFM task list
+3-2</label></li>
+<li class="fragment"><label><input type="checkbox" />GFM task list
+3-3</label></li>
+</ul></li>
+<li class="fragment"><label><input type="checkbox" />GFM task list
+4</label>
+<ul class="task-list">
+<li class="fragment"><label><input type="checkbox" />GFM task list
+4-1</label></li>
+<li class="fragment"><label><input type="checkbox" />GFM task list
+4-2</label></li>
+</ul></li>
+</ul>
 <!-- slide -->
-</section>
-<section id="js" class="slide level1">
-<h1>js</h1>
-<p><a href="#/4-功能">自定义调用class</a>方法，根据<a
-href="https://zhuanlan.zhihu.com/p/532888400?utm_id=0">《爱吃的小白-MPE的使用》</a>修改，文件夹<code>my-mume</code>的js文件替换到本地.mume文件夹</p>
-<!-- slide -->
-<h2 id="标题使用规范">标题使用规范</h2>
+<h2 id="绘制三线表格-tables">绘制三线表格 Tables</h2>
 <table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 8%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
 <tr>
-<th>标题位置</th>
-<th>写法</th>
-<th>效果</th>
+<th>项目</th>
+<th style="text-align: right;">价格</th>
+<th style="text-align: center;">数量</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>文章标题</td>
-<td><code># 文章标题</code></td>
-<td>文章标题</td>
+<td>计算机</td>
+<td style="text-align: right;">$1600</td>
+<td style="text-align: center;">5</td>
 </tr>
 <tr>
-<td>第一章</td>
-<td><code># 第一章</code></td>
-<td>1　第一章</td>
+<td>手机</td>
+<td style="text-align: right;">$12</td>
+<td style="text-align: center;">12</td>
 </tr>
 <tr>
-<td>第一节</td>
-<td><code>## 第一节</code></td>
-<td>1.1　第一节</td>
+<td>管线</td>
+<td style="text-align: right;">$1</td>
+<td style="text-align: center;">234</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
 </tr>
 <tr>
-<td>第一段</td>
-<td><code>### 第一段</code></td>
-<td>（1）　第一段</td>
-</tr>
-<tr>
-<td>需要在目录显示的</td>
-<td><code>#### xxx</code></td>
-<td>.</td>
-</tr>
-<tr>
-<td>不需要在目录显示的</td>
-<td><code>***效果***</code></td>
-<td>.</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
 </tr>
 </tbody>
 </table>
 <!-- slide -->
-</section>
-<section id="功能" class="slide level1">
-<h1>功能</h1>
-<p>调用样式规则 开始：<code>/.cssname &lt;</code>
-结束：<code>/-&gt;</code></p>
-<p>5.22更新：<code>/&gt;</code> 👉
-<code>/-&gt;</code>，因有部分单标签结束为<code>/&gt;</code>，为避免重复作此修改</p>
-<h2 id="右下角的提示-.fix">右下角的提示 <code>/.fix</code></h2>
-<p>移入显示，移出仅剩一行 <strong><em>效果</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
 <!-- slide -->
-<h2 id="左右分栏-.wrap2">左右分栏 <code>/.wrap2</code></h2>
-<p>部分内容想做左右对比参考效果，如：html和js写完占据大量的高度、两边代码对比等
-<strong><em>用法</em></strong></p>
-<p>55开 <code>/.wrap2 &lt;</code> <code>/.box &lt;</code>
-<code>/-&gt;</code> <code>/.box &lt;</code> <code>/-&gt;</code>
-<code>/-&gt;</code></p>
-<p>37开<code>/.wrap2 &lt;</code> <code>/.box lit3 &lt;</code>
-<code>/-&gt;</code> <code>/.box lit7 &lt;</code> <code>/-&gt;</code>
-<code>/-&gt;</code></p>
-<p>46开 同理 lit4 lit6 <!-- slide --> <strong><em>ps</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>Function name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>help()</code></td>
+<td>Display the help window.</td>
+</tr>
+<tr>
+<td><code>destroy()</code></td>
+<td><strong>Destroy your computer!</strong></td>
+</tr>
+</tbody>
+</table>
+<!-- slide -->
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Left-Aligned</th>
+<th style="text-align: center;">Center Aligned</th>
+<th style="text-align: right;">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">col 3 is</td>
+<td style="text-align: center;">some wordy text</td>
+<td style="text-align: right;">$1600</td>
+</tr>
+<tr>
+<td style="text-align: left;">col 2 is</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">$12</td>
+</tr>
+<tr>
+<td style="text-align: left;">zebra stripes</td>
+<td style="text-align: center;">are neat</td>
+<td style="text-align: right;">$1</td>
+</tr>
+</tbody>
+</table>
+<!-- slide -->
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer</td>
+<td style="text-align: right;">$1600</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td style="text-align: right;">$12</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td style="text-align: right;">$1</td>
+</tr>
+</tbody>
+</table>
+<!-- slide -->
+<h2 id="特殊符号-html-entities-codes">特殊符号 HTML Entities Codes</h2>
+<p>© &amp; ¨ ™ ¡ £ &amp; &lt; &gt; ¥ € ® ± ¶ § ¦ ¯ « ·</p>
+<p>X² Y³ ¾ ¼ × ÷ »</p>
+<p>18ºC ” ’</p>
+<!-- slide -->
+<h2 id="反斜杠-escape">反斜杠 Escape</h2>
+<p>*literal asterisks*</p>
+<h2 id="科学公式-texkatex">科学公式 TeX(KaTeX)</h2>
+<p><span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
+<p>行内的公式<span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span>行内的公式，行内的<span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span>公式。</p>
+<p><span class="math display"><em>x</em> &gt; <em>y</em></span></p>
+<!-- $$\(\sqrt{3x-1}+(1+x)^2\)$$ -->
+<!-- $$sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$ -->
+<!-- slide -->
+<p>多行公式：</p>
+<pre class="math"><code>\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)</code></pre>
+<!-- slide -->
+<pre class="katex"><code>\displaystyle 
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        } 
+    }</code></pre>
+<!-- slide -->
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>f(x) = <span class="fu">\int</span>_{-<span class="fu">\infty</span>}^<span class="fu">\infty</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\hat</span> f(<span class="fu">\xi</span>)<span class="fu">\,</span>e^{2 <span class="fu">\pi</span> i <span class="fu">\xi</span> x}</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\,</span>d<span class="fu">\xi</span></span></code></pre></div>
+<!-- slide -->
+<h2 id="绘制流程图-flowchart">绘制流程图 Flowchart</h2>
+<pre class="flow"><code>st=&gt;start: 用户登陆
+op=&gt;operation: 登陆操作
+cond=&gt;condition: 登陆成功 Yes or No?
+e=&gt;end: 进入后台
+
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op</code></pre>
+<!-- slide -->
+<h2 id="绘制序列图-sequence-diagram">绘制序列图 Sequence Diagram</h2>
+<pre class="seq"><code>Andrew-&gt;China: Says Hello 
+Note right of China: China thinks\nabout it 
+China--&gt;Andrew: How are you? 
+Andrew-&gt;&gt;China: I am good thanks!</code></pre>
+<!-- slide -->
+<h2 id="列表">列表</h2>
+<h4 id="无序列表">无序列表</h4>
+<ul>
+<li class="fragment">Item 1</li>
+<li class="fragment">Item 2
+<ul>
+<li class="fragment">Item 2a</li>
+<li class="fragment">Item 2b #### 有序列表</li>
+</ul></li>
+</ul>
 <ol type="1">
-<li class="fragment">其他的可以自己去补充</li>
-<li class="fragment">==出现异常！==
-当左右分栏的多行代码块内<strong>出现↓</strong> 或
-<strong>目录消失</strong>时，代码块加一格tab即可
-<code>&lt;p data-line="60" class="sync-line" style="margin:0;"&gt;&lt;/p&gt;</code></li>
-<li class="fragment">并没有很严格的30% 70% 40% 60%，大概 <!-- slide -->
-## 4.3. 图片大小 <code>#img_7</code></li>
+<li class="fragment">Item 1</li>
+<li class="fragment">Item 2</li>
+<li class="fragment">Item 3
+<ol type="1">
+<li class="fragment">Item 3a</li>
+<li class="fragment">Item 3b <!-- slide --> ## 环境准备</li>
+</ol></li>
 </ol>
-<p><code>=100x100</code> 在vscode无法使用，装了几个插件都不行</p>
-<p>使用：</p>
+<h4 id="visual-studio-code-编辑器安装">Visual Studio Code
+编辑器安装</h4>
+<h4 id="markdown-preview-enhanced-扩展安装">Markdown Preview Enhanced
+扩展安装</h4>
+<h4 id="pandoc安装">Pandoc安装</h4>
+<p><code>scoop</code> <!-- slide --> ## 基本语法</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>% 一级标题</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu"># 二级标题</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 三级标题</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 五级标题</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">###### 六级标题</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>正文</span></code></pre></div>
 <!-- slide -->
-<h2 id="文字间隔---">4.4. 文字间隔 <code>/--</code></h2>
-<p>实现效果</p>
-<p>左侧文字有固定的宽度100px</p>
-<p>使用方法 <code>/--split 将字符串转化为数组</code></p>
-<p>注意在 split 后面加空格以作区分 <!-- slide --> 这是第一部分。</p>
-<div class="fragment">
-<p>这是延迟显示的第二部分。</p>
-</div>
-<p>% 幻灯片标题 % Kiwi % Feb 2025 这是幻灯片正文。 ::: notes
-这是给演讲者看的备注内容，观众看不到。 :::</p>
+<h2 id="markdown-基本语法">Markdown 基本语法</h2>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 这里是引用</span></span></code></pre></div>
+<!-- slide -->
+<h2 id="markdown-基本语法-1">Markdown 基本语法</h2>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 表格</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 实验组 <span class="pp">|</span> 时间  <span class="pp">|</span>   数量 <span class="pp">|</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="pp">| :-----</span> <span class="pp">| :---:</span> <span class="pp">| -----:</span> <span class="pp">|</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M1     <span class="pp">|</span>  1h   <span class="pp">|</span> 120000 <span class="pp">|</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M2     <span class="pp">|</span>  2h   <span class="pp">|</span> 140000 <span class="pp">|</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M3     <span class="pp">|</span>  3h   <span class="pp">|</span> 160000 <span class="pp">|</span></span></code></pre></div>
+<!-- slide -->
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 下面是分割线</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 下面也是分割线</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div>
+<!-- slide -->
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 块内公式</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 行内公式</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$</span></code></pre></div>
+<!-- slide -->
+<h4 id="mpe-幻灯片分割">MPE 幻灯片分割</h4>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>% Hi here</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>let us go</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>Thank you!</span></code></pre></div>
+<!-- slide -->
+<p>% Thank you! % Kiwi % Feb 2025</p>
 <h2 id="the-end">The End</h2>
 <p>Thanks for your time!</p>
 </section>

@@ -54,7 +54,7 @@ class MarkdownConverter():
     def get_file_mtime(self, link):
         return self.get_absolute_path(link).stat().st_mtime
 
-    def get_formated_mtime_filename(self, link):
+    def get_formatted_mtime_filename(self, link):
         my_mtime = self.get_file_mtime(link)
         d = datetime.datetime.fromtimestamp(my_mtime)
         date_format = '%Y-%m-%d-%H-%M-%S-%f'
@@ -108,7 +108,7 @@ class MarkdownConverter():
     def generate_links(self):
         self.generated_links = []
         for link in self.original_image_links:
-            new_link = self.get_formated_mtime_filename(link)
+            new_link = self.get_formatted_mtime_filename(link)
             self.generated_links.append(new_link)
 
     def copy_image_files(self):
