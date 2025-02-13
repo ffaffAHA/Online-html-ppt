@@ -1,0 +1,192 @@
+@label-height:28px;
+
+.bar_template {
+  .label {
+    position:absolute;
+    left:20px;
+    top:-15px;
+    color:white;
+    padding:0px 6px 0px 6px;
+  }
+  &:before {
+  
+    position:absolute;
+    left:20px;
+    top:-15px;
+    color:white;
+    padding:0px 6px 0px 6px;
+  }
+  margin-top:20px;
+  margin-bottom:20px;
+  border:1px solid;
+  position:relative;
+  padding:@label-height/2;
+  border-radius: 5px;
+}
+
+.def {//definition
+  .bar_template();
+  &:before {
+    content: attr(name);
+    background-color:#d8b049;
+  }
+
+  background-color: #f3e9de;
+  border-color: #e6d303;
+  
+}
+
+.thm {//theorem
+  .bar_template();
+  &:before {
+    content: attr(name);
+    background-color:#42b51b;
+  }
+  background-color: #b2f1ce;
+  border-color: #e6d303;
+}
+
+.pf { //proof
+  .bar_template();
+
+  &:before {
+    content: "证明";
+    color: white;
+    background-color: rgb(73, 73, 255);
+  }
+  &:after {
+    content: "得证";
+    color: blue;
+  }
+  background-color:aqua;
+  border-color:lightpink;
+}
+
+.question {//question
+  .bar_template();
+  &:before {
+    content:attr(name);
+    color: white;
+    background-color:rgb(250, 151, 168);
+  }
+  background-color:rgb(252, 210, 217);
+  border-color:rgb(233, 88, 233)
+}
+
+/* ----------------------- */
+
+
+/* 左右分栏 （注意div内需要一个tab，否则会影响标题显示） */
+.wrap2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  .box {
+      width: 48%;
+
+      &:nth-child(1) {
+          padding-right: 2%;
+          border-right: 1px solid #ddd;
+      }
+
+      &.lit3 {
+          width: 30%;
+      }
+
+      &.lit7 {
+          width: 66%;
+      }
+
+      &.lit4 {
+          width: 35%;
+      }
+
+      &.lit6 {
+          width: 61%;
+      }
+
+      &>p:first-child,
+      &>p:first-child em strong {
+          margin-top: 0;
+          padding-top: 0;
+      }
+
+  }
+}
+
+/* ----------------------- */
+
+
+// /* 方便复制的小代码 */
+// [for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+//   /* 解决fixed不生效问题 */
+//   left: 0;
+//   transform: translateX(0);
+// }
+
+
+/* ----------------------- */
+// 创建了一个固定的、初始较小的元素，当鼠标悬停时会展开以显示更多内容，提供了一种交互式且吸引人的用户体验。
+
+.fix {
+  position: fixed;
+  width: 200px;
+  height: 35px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  border-radius: 4px;
+  outline: 5px solid #ffeead;
+  background-color: white;
+  border: 1px solid #d9534f;
+  box-sizing: border-box;
+  padding: 5px;
+  transition: height 1s 1s;
+  overflow: hidden;
+
+  &>p,
+  strong {
+      margin-top: 0;
+      padding-top: 0;
+  }
+
+  &:hover {
+      height: 700px;
+      transition: all 1s 0s;
+      overflow: scroll;
+  }
+}
+
+/* ----------------------- */
+
+
+/* 宽度100， */
+.tabb {
+  min-width: 100px;
+  display: inline-block;
+  color: #555cbe;
+}
+
+
+
+/* 图片经过放大 */
+img:hover {
+  animation: imgbig 0s linear 0.8s 1 normal forwards;
+}
+@keyframes  imgbig{
+  0%{
+  }
+  100%{
+      height: 80%;
+      width: auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      object-fit: contain;
+      transform: translate(-50%,-50%);
+      z-index: 99;
+  }
+}
+
+/* ----------------------- */

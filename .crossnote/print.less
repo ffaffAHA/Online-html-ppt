@@ -1,0 +1,65 @@
+/* 仅在浏览时使用（打印时无效） */
+@media screen {
+    .markdown-preview {
+      /*左右页边距*/
+      padding-left: 1.6cm !important;
+      padding-right: 1.6cm !important;
+      box-shadow: 0 0 24px 12px #CCCCCC;
+      /*页面阴影*/
+    }
+  }
+  
+  // 这个代码块中的样式仅在文档进行打印时应用
+  
+@media print {
+    @page {
+      margin: 2.54cm 3.18cm !important;
+      size: A4;
+    }
+      body {
+        background-color: #ffffff;
+  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #000000;
+            page-break-after: avoid;
+        }
+  
+        blockquote {
+            color: #9ba09d
+        }
+  
+        pre {
+            page-break-inside: avoid
+        }
+  
+        table {
+            display: table
+        }
+  
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%
+        }
+  
+        pre,
+        code {
+            word-wrap: break-word;
+            white-space: pre;
+          // //   overflow-x: hidden;
+          //   word-break: break-all
+  
+        }
+    }
+  }
+  
+ @media screen and (min-width: 914px) {
+      [for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+          padding: 2em calc(37% - 457px + 2em) !important;
+      }
+  }

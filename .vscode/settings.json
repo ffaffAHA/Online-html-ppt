@@ -1,0 +1,35 @@
+{
+
+"workbench.colorCustomizations": {},
+"workbench.iconTheme": "vscode-icons",
+    "markdown-preview-enhanced.revealjsTheme": "none.css",
+    "markdown-preview-enhanced.previewTheme": "vue.css",
+    "markdown-preview-enhanced.codeBlockTheme": "auto.css",
+    "markdown-preview-enhanced.printBackground": true, 
+    "markdown.extension.toc.levels": "2..4",
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+    "markdownlint.config": {
+        "MD029": false,
+        "MD033": false
+    },
+
+    // code-runner
+    "python.analysis.supportDocstringTemplate": true,
+    "powershell.analyzeOpenDocumentsOnly": true,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.usePandocParser": true,
+
+
+    "markdown-preview-enhanced.pandocMarkdownFlavor": "markdown+raw_tex+tex_math_dollars",
+    // "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "markdown-preview-enhanced.pandocArguments": [
+        "--filter=pandoc-crossref",
+        // "--number-sections",
+        // "-o ${/PDF}"
+    ],
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.latexEngine": "xelatex",
+}
