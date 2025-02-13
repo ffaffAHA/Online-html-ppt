@@ -13,8 +13,12 @@ author:Kiwi
 
 <!-- slide -->
 # 目录
+[toc]
 
+<!-- slide -->
 ## 环境准备
+
+  vscode+EMP+pandoc+pandoc+pandoc-crossref
 
 ## 基本语法
 

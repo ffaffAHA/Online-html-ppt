@@ -28,7 +28,6 @@
     "markdown-preview-enhanced.pandocArguments": [
         "--filter=pandoc-crossref",
         // "--number-sections",
-        // "-o ${/PDF}"
     ],
     "markdown-preview-enhanced.enableHTML5Embed": true,
     "markdown-preview-enhanced.latexEngine": "xelatex",

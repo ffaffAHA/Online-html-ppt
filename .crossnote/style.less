@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  font-family: "宋体", "PingFang SC", "Microsoft YaHei", sans-serif !important;
   line-height: 1.8;
   font-weight: 500;
   font-size: auto;
@@ -137,20 +137,19 @@ body {
 /* 加粗 */
       strong {
           /* color: #fa6069; */
-          color: #ff404b;
+          color: #000000;
           padding: 0 2px;
       }
 /* Italics */
       em {
-          /* color: #4c9800; */
-          color: #00aa00;
+          color: #3e2a6d;
           font-style: normal;
-          padding: 0 2px;
+          padding: 2px;
 
           strong {
-              color: #555cbe;
-              padding: 20px 0 0 0;
-              margin-left: -7px;
+              color: #ff0000;
+              padding: 10px 0 0 0;
+              margin-left: -10px;
               /* font-size: 14px; */
               font-size: 15px;
               font-weight: bold;
@@ -172,20 +171,20 @@ body {
           color: #f10a5f;
       }
 
-      // a {
-      //     color: #00aaff;
-      //     text-decoration: none;
+      a {
+          color: #00aaff;
+          text-decoration: none;
 
-      //     &:hover {
-      //         color: #00aaff;
-      //         text-decoration: none
-      //     }
+          &:hover {
+              color: #00aaff;
+              text-decoration: none
+          }
 
-      //     &:not([href]) {
-      //         color: inherit;
-      //         text-decoration: none
-      //     }
-      // }
+          &:not([href]) {
+              color: inherit;
+              text-decoration: none
+          }
+      }
       p {
         text-indent: 2em;//首行缩进
       }
@@ -351,17 +350,45 @@ body {
           margin-bottom: 32px;
       }
 
-      table {
-          display: inline-block !important;
-          /* font-size: 14px; */
-          font-size: 15px;
-          width: auto;
-          max-width: 100%;
-          overflow: auto;
-          border-collapse: collapse;
-          border-radius: 4px;
-          background-color: #fff;
-      }
+/* 三线表 */
+table {
+    border-top: 1.5pt solid;
+    border-bottom: 1.5pt solid;
+    font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "Source Han Serif SC", 'simsun', sans-serif;
+    text-align: center;
+    /*文字居中*/
+    page-break-inside: avoid;
+    /*禁止断页*/
+    width: 100%;
+    /*扩展表格宽度*/
+    overflow: auto;
+    margin-bottom: 8pt;
+    /*表格间距*/
+    border-collapse: collapse;
+  }
+  
+  table .katex {
+    font-size: 9pt;
+    /*表内公式*/
+  }
+  
+  table td {
+    font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "Source Han Serif SC", 'simsun', sans-serif;
+    font-size: 9pt;
+    /*表内文字*/
+  }
+  
+  table thead {
+    border-bottom: 0.75pt solid black;
+    /*三线表中间线*/
+  }
+  
+  /*标题行*/
+  table th {
+    font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "SimHei", "Source Han Serif SC", 'simsun', sans-serif;
+    font-size: 9pt;
+  }
+  
 
 
 
@@ -471,55 +498,6 @@ body {
           border-radius: 3px
       }
 
-      // -------------------------------------------------------------
-
-
-
-
-
-    //   /* 添加标题序号，遮住文章内容的序号，保留目录序号 */
-    //   h2:before,
-    //   h3:before,
-    //   h4:before,
-    //   h5:before,
-    //   h6:before {
-    //       padding-right: 10px;
-    //       background-color: #fff;
-    //       margin-right: -22px;
-    //       z-index: 98;
-    //       position: relative;
-    //       height: 1.1em;
-    //   }
-
-    //   h2:before {
-    //       margin-right: -22px;
-    //   }
-
-    //   h3:before {
-    //       margin-right: -40px;
-    //   }
-
-    //   h4:before {
-    //       margin-right: -46px;
-    //   }
-
-    //   h5:before {
-    //       margin-right: -15px;
-    //   }
-
-    //   h6:before {
-    //       margin-right: -23px;
-    //   }
-
-    //   /* 二级标题序号10+ */
-    //   h2:nth-of-type(n+10):before {
-    //       margin-right: -32px;
-    //   }
-
-    //   h2:nth-of-type(n+10)~h3:before {
-    //       margin-right: -50px;
-    //   }
-
 /* html <a> 标签样式 */  
   a {
       text-decoration: none;
@@ -543,7 +521,17 @@ body {
 @import url(print.less);
 
 /* ----------------------- */
-
+/* 侧边栏收起时处理页面宽度 */
+[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  
+  /* 侧边栏打开时处理页面宽度 */
+  [for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+    left: calc(50% + 150px) !important;
+    transform: translateX(-50%);
+  }
 
 
 
@@ -598,342 +586,6 @@ body {
             }
         }
     }
-
-    // // .preview-container.show-sidebar-toc .mume,
-    // .preview-container.show-sidebar-toc .md-sidebar-toc {
-    // height: 100vh !important;
-    // position: initial !important;
-    // overflow-y: scroll;
-    // }
-
-    // .preview-container #md-toolbar {
-    // right: 100px !important;
-    // }
-
-    // .preview-container.show-sidebar-toc .md-sidebar-toc details summary a {
-    // padding-right: 2px !important;
-    // }
-
-
-    // /* -----------无样式 save------------ */
-    // .md-toc-link-wrapper {
-    // display: block;
-    // padding-right: 20px;
-    // list-style: none!important;
-    // border-bottom: 0;
-    // color: #555cbe;
-    // }
-/* ----------------------- */
-//   li {
-//   font-size: 0.8rem !important;
-//   /*字号*/
-//   margin-bottom: 0 !important;
-//   text-align: left;
-//   /*左对齐*/
-// }
-//   ul li {
-//   font-weight: bold;
-//   /*一级大纲*/
-// }
-
-//  ul ul {
-//   padding-left: 0pt !important;
-//   padding-right: 0 !important;
-//   margin-top: 2pt !important;
-//   margin-bottom: 2pt !important;
-// }
-
-//  ul ul li {
-//   margin-bottom: 8pt !important;
-//   margin-top: 8pt !important;
-// }
-
-//  ul ul ul {
-//   padding-left: 8pt !important;
-// }
-
-//  ul ul ul li {
-//   font-weight: normal;
-//   margin-top: 2pt !important;
-//   margin-bottom: 2pt !important;
-// }
-
-// /* 侧栏自动编号 */
-// /* 复位计数器 */
-// body {
-//   counter-reset: outline-h2 0 outline-h3 0 outline-h4 0 outline-h5 0
-// }
-
-//  ul li {
-//   counter-reset: outline-h2;
-// }
-
-//  ul ul li {
-//   counter-reset: outline-h3;
-// }
-
-//  ul ul ul li {
-//   counter-reset: outline-h4;
-// }
-
-//  ul ul ul ul li {
-//   counter-reset: outline-h5;
-// }
-
-// /* 进行编号 */
-
-//  ul ul li:before {
-//   counter-increment: outline-h2;
-//   content: counter(outline-h2) " ";
-// }
-
-//  ul ul ul li:before {
-//   counter-increment: outline-h3;
-//   content: counter(outline-h2) "."counter(outline-h3) " ";
-// }
-
-//  ul ul ul ul li:before {
-//   counter-increment: outline-h4;
-//   content: counter(outline-h2) "."counter(outline-h3) "."counter(outline-h4) " ";
-// }
-
-//  ul ul ul ul ul li:before {
-//   counter-increment: outline-h4;
-//   content: counter(outline-h2) "."counter(outline-h3) "."counter(outline-h4) "."counter(outline-h5) " ";
-// }
-
-
-//     }
-/* 去掉开关图标，对齐 */
-// .md-sidebar-toc ul,
-// .md-sidebar-toc ol {
-//   display: inline-block;
-//   padding: 0;
-//   margin: 0;
-
-//   li {
-//       margin-bottom: 0;
-//   }
-// }
-
-
-
-/* ----------------------- */
-
-
-/* 左右分栏 （注意div内需要一个tab，否则会影响标题显示） */
-.wrap2 {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-
-  .box {
-      width: 48%;
-
-      &:nth-child(1) {
-          padding-right: 2%;
-          border-right: 1px solid #ddd;
-      }
-
-      &.lit3 {
-          width: 30%;
-      }
-
-      &.lit7 {
-          width: 66%;
-      }
-
-      &.lit4 {
-          width: 35%;
-      }
-
-      &.lit6 {
-          width: 61%;
-      }
-
-      &>p:first-child,
-      &>p:first-child em strong {
-          margin-top: 0;
-          padding-top: 0;
-      }
-
-  }
-}
-
-/* ----------------------- */
-
-
-// /* 方便复制的小代码 */
-// [for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
-//   /* 解决fixed不生效问题 */
-//   left: 0;
-//   transform: translateX(0);
-// }
-
-
-/* ----------------------- */
-// 创建了一个固定的、初始较小的元素，当鼠标悬停时会展开以显示更多内容，提供了一种交互式且吸引人的用户体验。
-
-.fix {
-  position: fixed;
-  width: 200px;
-  height: 35px;
-  bottom: 10px;
-  right: 10px;
-  z-index: 999;
-  border-radius: 4px;
-  outline: 5px solid #ffeead;
-  background-color: white;
-  border: 1px solid #d9534f;
-  box-sizing: border-box;
-  padding: 5px;
-  transition: height 1s 1s;
-  overflow: hidden;
-
-  &>p,
-  strong {
-      margin-top: 0;
-      padding-top: 0;
-  }
-
-  &:hover {
-      height: 700px;
-      transition: all 1s 0s;
-      overflow: scroll;
-  }
-}
-
-/* ----------------------- */
-
-
-/* 宽度100， */
-.tabb {
-  min-width: 100px;
-  display: inline-block;
-  color: #555cbe;
-}
-
-
-
-/* 图片经过放大 */
-img:hover {
-  animation: imgbig 0s linear 0.8s 1 normal forwards;
-}
-@keyframes  imgbig{
-  0%{
-  }
-  100%{
-      height: 80%;
-      width: auto;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      object-fit: contain;
-      transform: translate(-50%,-50%);
-      z-index: 99;
-  }
-}
-
-/* ----------------------- */
-
-/* 代码样式 */
-// pre {
-//   /* 书写方向，从左到右 */
-//   direction: ltr;
-//   text-align: left;
-//   /* 连续的空白符会被保留。在遇到换行符或者<br>元素时才会换行 */
-//   white-space: pre;
-//   /* 单词间距 */
-//   word-spacing: normal;
-//   word-break: normal;
-//   overflow: auto;
-//   line-height: 1.65;
-//   tab-size: 4;
-//   /* 换行方式，单词内有建议换行点也不会在那里换行。只会在空白符处换行 */
-//   hyphens: none;
-//   /* color: #555; */
-//   font-size: 14px;
-//   color: #0037ff;
-//   background-color: #fff;
-//   padding: 15px 1.25em 15px;
-//   margin: -10px 0 30px;
-//   border-radius: 5px;
-//   border: 1px solid #eee;
-//   box-shadow: 5px 8px 9px -1px rgb(0 0 0 / 3%),
-//       0 3px 5px 0 rgb(0 0 0 / 3%),
-//       2px 3px 4px -1px rgb(0 0 0 / 4%);
-
-
-
-//   &[data-line] {
-//       position: relative;
-//       padding: 1em 0 1em 3em
-//   }
-
-//   &[data-line] .line-highlight-wrapper {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       background-color: transparent;
-//       display: block;
-//       width: 100%
-//   }
-
-//   &[data-line] .line-highlight {
-//       position: absolute;
-//       left: 0;
-//       right: 0;
-//       padding: inherit 0;
-//       margin-top: 1em;
-//       background: rgba(153, 122, 102, 0.08);
-//       background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
-//       pointer-events: none;
-//       line-height: inherit;
-//       white-space: pre
-//   }
-
-//   &[data-line] .line-highlight:before,
-//   &[data-line] .line-highlight[data-end]:after {
-//       content: attr(data-start);
-//       position: absolute;
-//       top: .4em;
-//       left: .6em;
-//       min-width: 1em;
-//       padding: 0 .5em;
-//       background-color: rgba(153, 122, 102, 0.4);
-//       color: #f5f2f0;
-//       font: bold 65%/1.5 sans-serif;
-//       text-align: center;
-//       vertical-align: .3em;
-//       border-radius: 999px;
-//       text-shadow: none;
-//       box-shadow: 0 1px white
-//   }
-
-//   &[data-line] .line-highlight[data-end]:after {
-//       content: attr(data-end);
-//       top: auto;
-//       bottom: .4em
-//   }
-// }
-
-/* 如使用mac风格，pre paddingtop为30px
-pre::before {
-  background: #fc625d;
-  border-radius: 50%;
-  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-  content: ' ';
-  height: 12px;
-  left: 12px;
-  margin-top: -20px;
-  position: absolute;
-  width: 12px;
-} */
-
-/* 有 class="language-java"
-pre[class*="language-"] {
-  padding: 1em
-} */
 
 code[class*="language-"] .token.comment,
 pre[class*="language-"] .token.comment,
