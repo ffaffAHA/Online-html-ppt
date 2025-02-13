@@ -1,18 +1,14 @@
 ---
+id: "test"
 class: "main"
 title : "test"
 auther : "jinshang lou "
-id: "test"
-html:
-  toc: true
-class: "style"
 date: 2025.02.12
 output:
   pdf_document:
-    path: /Exports/
+    path: /PDF/index.pdf
     toc: true
-    toc_depth: 2
-    latex_engine: xelatex
+    # toc_depth: 2
 # presentation:
 #   mouseWheel: true
 #   fontsize: auto
