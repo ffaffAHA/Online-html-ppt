@@ -62,3 +62,12 @@
 //   markdown = markdown.replace(reg,replacement);
 //   return markdown;
 // }
+// 显示/隐藏侧边栏
+document.querySelector('.sidebar-toggle').addEventListener('click', () => {
+    document.querySelector('.md-sidebar').classList.toggle('md-sidebar-active');
+  });
+  
+  // 点击遮罩关闭
+  document.querySelector('.sidebar-mask').addEventListener('click', () => {
+    document.querySelector('.md-sidebar').classList.remove('md-sidebar-active');
+  });

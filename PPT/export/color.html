@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfortable Colors Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .color-section {
+            margin-bottom: 30px;
+        }
+
+        .color-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .color-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .color-box {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .color-box .color-description {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            width: max-content;
+            max-width: 200px;
+            z-index: 1;
+        }
+
+        .color-box:hover .color-description {
+            display: block;
+        }
+
+        /* 灰色系 */
+        .gray-light {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .gray-medium {
+            background-color: #aaaaaa;
+        }
+
+        .gray-dark {
+            background-color: #666666;
+        }
+
+        /* 蓝色系 */
+        .blue-light {
+            background-color: #add8e6;
+            color: #333;
+        }
+
+        .blue-medium {
+            background-color: #007bff;
+        }
+
+        .blue-dark {
+            background-color: #003366;
+        }
+
+        /* 绿色系 */
+        .green-light {
+            background-color: #90ee90;
+            color: #333;
+        }
+
+        .green-medium {
+            background-color: #28a745;
+        }
+
+        .green-dark {
+            background-color: #006400;
+        }
+
+        /* 粉色系 */
+        .pink-light {
+            background-color: #ffb6c1;
+            color: #333;
+        }
+
+        .pink-medium {
+            background-color: #ff69b4;
+        }
+
+        .pink-dark {
+            background-color: #c71585;
+        }
+
+        /* 黄色系 */
+        .yellow-light {
+            background-color: #ffffe0;
+            color: #333;
+        }
+
+        .yellow-medium {
+            background-color: #ffd700;
+        }
+
+        .yellow-dark {
+            background-color: #b8860b;
+        }
+
+        /* 紫色系 */
+        .purple-light {
+            background-color: #e6e6fa;
+            color: #333;
+        }
+
+        .purple-medium {
+            background-color: #8a2be2;
+        }
+
+        .purple-dark {
+            background-color: #4b0082;
+        }
+
+        /* 橙色系 */
+        .orange-light {
+            background-color: #ffa07a;
+            color: #333;
+        }
+
+        .orange-medium {
+            background-color: #ff8c00;
+        }
+
+        .orange-dark {
+            background-color: #8b4513;
+        }
+
+        /* 棕色系 */
+        .brown-light {
+            background-color: #d2b48c;
+            color: #333;
+        }
+
+        .brown-medium {
+            background-color: #a0522d;
+        }
+
+        .brown-dark {
+            background-color: #654321;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Comfortable Colors in Different Color Schemes</h1>
+
+    <!-- 灰色系 -->
+    <div class="color-section">
+        <h2>Gray Colors</h2>
+        <div class="color-container">
+            <div class="color-box gray-light">#f0f0f0
+                <span class="color-description">浅灰色，给人简洁、淡雅的感觉，常用于背景或需要弱化视觉干扰的地方。</span>
+            </div>
+            <div class="color-box gray-medium">#aaaaaa
+                <span class="color-description">中灰色，具有一定的沉稳感，可用于正文文字或次要元素的颜色。</span>
+            </div>
+            <div class="color-box gray-dark">#666666
+                <span class="color-description">深灰色，深沉、稳重，常作为强调色或重要元素的颜色。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 蓝色系 -->
+    <div class="color-section">
+        <h2>Blue Colors</h2>
+        <div class="color-container">
+            <div class="color-box blue-light">#add8e6
+                <span class="color-description">浅蓝色，清新、柔和，能营造出平静、舒适的氛围，常用于天空、海洋相关的设计。</span>
+            </div>
+            <div class="color-box blue-medium">#007bff
+                <span class="color-description">中蓝色，鲜明且专业，常被用于链接、按钮等交互元素，以吸引用户注意力。</span>
+            </div>
+            <div class="color-box blue-dark">#003366
+                <span class="color-description">深蓝色，深邃、神秘，可用于标题、重要区域的背景色，增加视觉重量。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 绿色系 -->
+    <div class="color-section">
+        <h2>Green Colors</h2>
+        <div class="color-container">
+            <div class="color-box green-light">#90ee90
+                <span class="color-description">浅绿色，象征着生机与活力，给人清新自然的感觉，适合用于环保、健康相关的设计。</span>
+            </div>
+            <div class="color-box green-medium">#28a745
+                <span class="color-description">中绿色，代表着希望和成长，常用于确认、成功等提示性元素。</span>
+            </div>
+            <div class="color-box green-dark">#006400
+                <span class="color-description">深绿色，稳重、可靠，可用于体现传统、高端的绿色产品或服务的设计。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 粉色系 -->
+    <div class="color-section">
+        <h2>Pink Colors</h2>
+        <div class="color-container">
+            <div class="color-box pink-light">#ffb6c1
+                <span class="color-description">浅粉色，柔和、温馨，能营造出浪漫、甜美的氛围，常用于女性主题或儿童相关的设计。</span>
+            </div>
+            <div class="color-box pink-medium">#ff69b4
+                <span class="color-description">中粉色，鲜明且具有吸引力，可用于突出重要的粉色元素或活动。</span>
+            </div>
+            <div class="color-box pink-dark">#c71585
+                <span class="color-description">深粉色，浓郁、优雅，适合用于高端、精致的粉色主题设计。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 黄色系 -->
+    <div class="color-section">
+        <h2>Yellow Colors</h2>
+        <div class="color-container">
+            <div class="color-box yellow-light">#ffffe0
+                <span class="color-description">浅黄色，明亮、温暖，给人阳光般的感觉，常用于营造欢快、友好的氛围。</span>
+            </div>
+            <div class="color-box yellow-medium">#ffd700
+                <span class="color-description">中黄色，鲜艳夺目，容易吸引注意力，可用于警告、提示等重要信息的展示。</span>
+            </div>
+            <div class="color-box yellow-dark">#b8860b
+                <span class="color-description">深黄色，类似金色，有高贵、奢华的感觉，常用于体现高品质、高端的设计。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 紫色系 -->
+    <div class="color-section">
+        <h2>Purple Colors</h2>
+        <div class="color-container">
+            <div class="color-box purple-light">#e6e6fa
+                <span class="color-description">浅紫色，柔和、淡雅，能营造出温馨、梦幻的氛围，常用于浪漫、艺术相关的设计。</span>
+            </div>
+            <div class="color-box purple-medium">#8a2be2
+                <span class="color-description">中紫色，具有一定的鲜明度，既不过于张扬，又能体现出紫色的神秘特质，可用于独特、创意的设计。</span>
+            </div>
+            <div class="color-box purple-dark">#4b0082
+                <span class="color-description">深紫色，深邃、神秘，有较强的视觉冲击力，常作为强调色用于重要的紫色元素或高端设计。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 橙色系 -->
+    <div class="color-section">
+        <h2>Orange Colors</h2>
+        <div class="color-container">
+            <div class="color-box orange-light">#ffa07a
+                <span class="color-description">浅橙色，清新活泼，容易让人联想到阳光和温暖，视觉上比较友好，常用于食品、旅游等相关设计。</span>
+            </div>
+            <div class="color-box orange-medium">#ff8c00
+                <span class="color-description">中橙色，鲜明且充满活力，能够吸引人们的注意力，可用于促销、活动等元素。</span>
+            </div>
+            <div class="color-box orange-dark">#8b4513
+                <span class="color-description">深橙色，接近棕色，稳重、温暖，带有复古的感觉，适合用于传统、经典的设计。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 棕色系 -->
+    <div class="color-section">
+        <h2>Brown Colors</h2>
+        <div class="color-container">
+            <div class="color-box brown-light">#d2b48c
+                <span class="color-description">浅棕色，类似米色，给人自然、舒适、温馨的感觉，常应用于家居设计、自然主题等场景。</span>
+            </div>
+            <div class="color-box brown-medium">#a0522d
+                <span class="color-description">中棕色，具有一定的厚重感，能营造出沉稳、质朴的氛围，常用于复古、传统风格的设计。</span>
+            </div>
+            <div class="color-box brown-dark">#654321
+                <span class="color-description">深棕色，深沉、经典，象征着历史和传统，常与高品质、高端的感觉相关联，可用于高端产品包装等设计。</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

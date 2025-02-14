@@ -1,14 +1,12 @@
 ---
-id: "test"
-class: "main"
-title : "test"
+title : "index"
 auther : "jinshang lou "
 date: 2025.02.12
 output:
   pdf_document:
     path: /PDF/index.pdf
-    toc: true
-    # toc_depth: 2
+    toc_depth: 2
+    latex_engine: xelatex
 # presentation:
 #   mouseWheel: true
 #   fontsize: auto
@@ -18,13 +16,15 @@ output:
 #   minScale: 0.2
 #   maxScale: 1.5
 ---
-<!-- //ppt -->
+
 # Markdown制作幻灯片
 
-<!-- //ppt -->
 
-<!-- //ppt -->
 ## 环境准备
+### this is 3.1
+### tish is 3.2
+#### this is 4
+##### this is 5
 
 >  `vscode + EMP + pandoc 3.5 + pandoc-crossref`
 
@@ -42,7 +42,7 @@ output:
 ```markdown 
 # 这个标题有 2 个 classes {.class1 .class2}
 ```
-<!-- //ppt -->
+
 
 ## 代码实例
 ```
@@ -69,7 +69,7 @@ _你也 **组合** 这些符号_
 
 ~~这个文字将会被横线删除~~
 
-<!-- //ppt -->
+
 
 上标：X<sub>2</sub>，下标：O<sup>2</sup>
 
@@ -77,7 +77,7 @@ _你也 **组合** 这些符号_
 
 > 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
 
-<!-- //ppt -->
+
 
 ### 引用 Blockquotes
 
@@ -87,7 +87,7 @@ _你也 **组合** 这些符号_
 
 > 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可
 
-<!-- //ppt -->
+
 
 ### 锚点与链接 Links
 
@@ -106,7 +106,7 @@ _你也 **组合** 这些符号_
 GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
 
 > @pandao
-<!-- //ppt -->
+
 ### 多语言代码高亮 Codes
 
 #### 行内代码 Inline code
@@ -120,7 +120,7 @@ GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.q
     <?php
         echo "Hello world!";
     ?>
-<!-- //ppt -->
+
 预格式化文本：
 
     | First Header  | Second Header |
@@ -128,7 +128,7 @@ GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.q
     | Content Cell  | Content Cell  |
     | Content Cell  | Content Cell  |
 
-<!-- //ppt -->
+
 #### JS代码
 
 ```javascript
@@ -159,7 +159,7 @@ function test() {
 var testBox = box();
 testBox.add("jQuery").remove("jQuery");
 ```
-<!-- //ppt -->
+
 
 #### HTML 代码 HTML codes
 
@@ -194,7 +194,7 @@ testBox.add("jQuery").remove("jQuery");
     </body>
 </html>
 ```
-<!-- //ppt -->
+
 ### 图片 Images
 
 Image:
@@ -202,18 +202,18 @@ Image:
 ![am](https://pandao.github.io/editor.md/examples/images/4.jpg)
 
 > Follow your heart.
-<!-- //ppt -->
+
 ![am](https://pandao.github.io/editor.md/examples/images/8.jpg)
 
 > 图为：厦门白城沙滩
-<!-- //ppt -->
+
 
 图片加链接 (Image + Link)：
 
 [![am](https://pandao.github.io/editor.md/examples/images/7.jpg)] "李健首张专辑《似水流年》封面"
 
 > 图为：李健首张专辑《似水流年》封面
-<!-- //ppt -->
+
 
 ### 列表 Lists
 
@@ -222,14 +222,14 @@ Image:
 - 列表一
 - 列表二
 - 列表三
-<!-- //ppt -->
+
 #### 无序列表（星号）Unordered Lists (*)
 
 * 列表一
 * 列表二
 * 列表三
 
-<!-- //ppt -->
+
 #### 无序列表（加号和嵌套）Unordered Lists (+)
 
 + 列表一
@@ -242,14 +242,14 @@ Image:
     * 列表二
     * 列表三
 
-<!-- //ppt -->
+
 #### 有序列表 Ordered Lists (-)
 
 1. 第一行
 2. 第二行
 3. 第三行
 
-<!-- //ppt -->
+
 #### GFM task list
 
 - [x] GFM task list 1
@@ -262,7 +262,7 @@ Image:
     - [ ] GFM task list 4-1
     - [ ] GFM task list 4-2
 
-<!-- //ppt -->
+
 ### 绘制三线表格 Tables
 
 | 项目        | 价格   |  数量  |
@@ -276,30 +276,30 @@ First Header  | Second Header
 Content Cell  | Content Cell
 Content Cell  | Content Cell 
 
-<!-- //ppt -->
+
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-<!-- //ppt -->
+
 | Function name | Description                    |
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
 | `destroy()`   | **Destroy your computer!**     |
 
-<!-- //ppt -->
+
 | Left-Aligned  | Center Aligned  | Right Aligned |
 | :------------ |:---------------:| -----:|
 | col 3 is      | some wordy text | $1600 |
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
-<!-- //ppt -->
+
 | Item      | Value |
 | --------- | -----:|
 | Computer  | $1600 |
 | Phone     |   $12 |
 | Pipe      |    $1 |
-<!-- //ppt -->
+
 
 
 #### 特殊符号 HTML Entities Codes
@@ -312,7 +312,7 @@ X² Y³ ¾ ¼  ×  ÷   »
 18ºC  "  '
 
 
-<!-- //ppt -->
+
 #### 反斜杠 Escape
 
 \*literal asterisks\*
@@ -328,7 +328,7 @@ $$x > y$$
 <!-- $$\(\sqrt{3x-1}+(1+x)^2\)$$ -->
 
 <!-- $$sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$ -->
-<!-- //ppt -->
+
 多行公式：
 
 ```math
@@ -338,7 +338,7 @@ $$x > y$$
 \left( \sum\_{k=1}^n a\_k^2 \right)
 \left( \sum\_{k=1}^n b\_k^2 \right)
 ```
-<!-- //ppt -->
+
 ```katex
 \displaystyle 
     \frac{1}{
@@ -350,13 +350,13 @@ $$x > y$$
         } 
     }
 ```
-<!-- //ppt -->
+
 ```latex
 f(x) = \int_{-\infty}^\infty
     \hat f(\xi)\,e^{2 \pi i \xi x}
     \,d\xi
 ```
-<!-- //ppt -->
+
 ### 绘制流程图 Flowchart
 
 ```flow
@@ -369,7 +369,7 @@ st->op->cond
 cond(yes)->e
 cond(no)->op
 ```
-<!-- //ppt -->
+
 ### 绘制序列图 Sequence Diagram
 
 ```seq
@@ -378,9 +378,9 @@ Note right of China: China thinks\nabout it
 China-->Andrew: How are you? 
 Andrew->>China: I am good thanks!
 ```
-<!-- //ppt -->
 
-<!-- //ppt -->
+
+
 ### 列表
 #### 无序列表
 - Item 1
@@ -393,7 +393,7 @@ Andrew->>China: I am good thanks!
 3. Item 3
    1. Item 3a
    2. Item 3b
-<!-- //ppt -->
+
 ### 环境准备
 
 #### Visual Studio Code 编辑器安装
@@ -402,7 +402,7 @@ Andrew->>China: I am good thanks!
 
 #### Pandoc安装
 `scoop`
-<!-- //ppt -->
+
 ### 基本语法
 
 ```Markdown
@@ -414,14 +414,14 @@ Andrew->>China: I am good thanks!
 ###### 六级标题
 正文
 ```
-<!-- //ppt -->
+
 
 #### Markdown 基本语法
 
 ```Markdown
 > 这里是引用
 ```
-<!-- //ppt -->
+
 
 #### Markdown 基本语法
 
@@ -433,7 +433,7 @@ Andrew->>China: I am good thanks!
 | M2     |  2h   | 140000 |
 | M3     |  3h   | 160000 |
 ```
-<!-- //ppt -->
+
 
 ```Markdown
 #### 下面是分割线
@@ -441,7 +441,7 @@ Andrew->>China: I am good thanks!
 #### 下面也是分割线
 ---
 ```
-<!-- //ppt -->
+
 ```Markdown
 
 #### 块内公式
@@ -452,17 +452,17 @@ $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 
 $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 ```
-<!-- //ppt -->
+
 
 #### MPE 幻灯片分割
 
 ```Markdown
-<!-- //ppt -->
+
 # Hi here
-<!-- //ppt -->
+
 let us go
-<!-- //ppt -->
+
 Thank you!
 ```
-<!-- //ppt -->
+
 # Thank you!

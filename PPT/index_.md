@@ -21,40 +21,30 @@ output:
   
   
   
-% Markdown制作幻灯片
-% Kiwi
-% Feb 2025
+# Markdown制作幻灯片
   
   
   
   
-# 环境准备
+## 环境准备
   
 >  `vscode + EMP + pandoc 3.5 + pandoc-crossref`
   
-# 基本语法
+## 基本语法
   
-% 这个标题拥有 1 个 id {#my_id}
-% Kiwi
-% Feb 2025
+# 这个标题拥有 1 个 id {#my_id}
   
 ```markdown
-% 这个标题拥有 1 个 id {#my_id}
-% Kiwi
-% Feb 2025
+# 这个标题拥有 1 个 id {#my_id}
 ```
   
-% 这个标题有 2 个 classes {.class1 .class2}
-% Kiwi
-% Feb 2025
+# 这个标题有 2 个 classes {.class1 .class2}
   
 ```markdown
-% 这个标题有 2 个 classes {.class1 .class2}
-% Kiwi
-% Feb 2025
+# 这个标题有 2 个 classes {.class1 .class2}
 ```
   
-# 代码实例
+## 代码实例
 ```
 *这会是 斜体 的文字*
 _这会是 斜体 的文字_
@@ -67,7 +57,7 @@ _你也 **组合** 这些符号_
 ~~这个文字将会被横线删除~~
 ```
   
-# 结果输出
+## 结果输出
   
 *这会是 斜体 的文字*
 _这会是 斜体 的文字_
@@ -89,7 +79,7 @@ _你也 **组合** 这些符号_
   
   
   
-# 引用 Blockquotes
+## 引用 Blockquotes
   
 > 引用文本 Blockquotes
   
@@ -99,7 +89,7 @@ _你也 **组合** 这些符号_
   
   
   
-# 锚点与链接 Links
+## 锚点与链接 Links
   
 [普通链接](http://baidu.com/ )
   
@@ -117,13 +107,13 @@ GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.q
   
 > @pandao
   
-# 多语言代码高亮 Codes
+## 多语言代码高亮 Codes
   
-# 行内代码 Inline code
+## 行内代码 Inline code
   
 执行命令：`npm install marked`
   
-# 缩进风格
+## 缩进风格
   
 即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
   
@@ -139,7 +129,7 @@ GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.q
     | Content Cell  | Content Cell  |
   
   
-# JS代码
+## JS代码
   
 ```javascript
 function test() {
@@ -171,7 +161,7 @@ testBox.add("jQuery").remove("jQuery");
 ```
   
   
-# HTML 代码 HTML codes
+## HTML 代码 HTML codes
   
 ```html
 <!DOCTYPE html>
@@ -205,31 +195,27 @@ testBox.add("jQuery").remove("jQuery");
 </html>
 ```
   
-# 图片 Images
+## 图片 Images
   
 Image:
   
-
-
-##  {data-background-image="assets/2025-02-13-23-04-18-465298.jpg" data-background-size="contain"}
+![am](https://pandao.github.io/editor.md/examples/images/4.jpg )
   
 > Follow your heart.
   
-
-
-##  {data-background-image="assets/2025-02-13-23-04-19-511520.jpg" data-background-size="contain"}
+![am](https://pandao.github.io/editor.md/examples/images/8.jpg )
   
 > 图为：厦门白城沙滩
   
   
 图片加链接 (Image + Link)：
   
-[![am](assets/2025-02-13-23-04-21-072597.jpg)] "李健首张专辑《似水流年》封面"
+[![am](https://pandao.github.io/editor.md/examples/images/7.jpg )] "李健首张专辑《似水流年》封面"
   
 > 图为：李健首张专辑《似水流年》封面
   
   
-# 列表 Lists
+## 列表 Lists
   
 #### 无序列表（减号）Unordered Lists (-)
   
@@ -264,7 +250,7 @@ Image:
 3. 第三行
   
   
-# GFM task list
+## GFM task list
   
 - [x] GFM task list 1
 - [x] GFM task list 2
@@ -277,26 +263,18 @@ Image:
     - [ ] GFM task list 4-2
   
   
-# 绘制三线表格 Tables
+## 绘制三线表格 Tables
   
-# MPE 幻灯片分割
+## MPE 幻灯片分割
   
 ```Markdown
 <!-- //ppt -->
-% Hi here
-% Kiwi
-% Feb 2025
+# Hi here
 <!-- //ppt -->
 let us go
 <!-- //ppt -->
 Thank you!
 ```
   
-% Thank you!
-% Kiwi
-% Feb 2025
+# Thank you!
   
-
-## The End
-
-Thanks for your time!

@@ -1,0 +1,1171 @@
+/* 引入 Lato 字体 */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@media screen and (min-width: 914px) {
+  [for="html-export"]:not([data-presentation-mode]) .markdown-preview {
+    padding: 2em calc(37% - 457px + 2em) !important;
+  }
+}
+body {
+  font-family: Lato, "宋体", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: auto;
+  overflow-x: hidden;
+  letter-spacing: 1px;
+  color: #4f4f4f;
+  background-color: #fff;
+  text-align: justify;
+  word-break: break-all;
+  margin: 0;
+  padding: 0;
+}
+/* 响应式设计：小屏幕下调整字体大小 */
+.markdown-preview {
+  background: -webkit-linear-gradient(top, transparent 19px, #efefef 20px), -webkit-linear-gradient(left, transparent 19px, #efefef 20px), #fff;
+  background-size: 20px 20px;
+  border-radius: 5px;
+  padding: 2em calc(34% - 536px + 2em);
+  box-sizing: border-box;
+  /* 加粗 */
+  /* Italics */
+  /* 图片 */
+  /* 列表 */
+  /* 表格 */
+  /* 复选框 */
+  /* 复选框选中 */
+  /* 引用 */
+  /* 三线表 */
+  /*标题行*/
+  /* html <a> 标签样式 */
+  /* 代码块 */
+}
+.markdown-preview > :first-child {
+  margin-top: 0;
+}
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  line-height: 1;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.markdown-preview h1 {
+  font-size: 22px;
+  color: #646464;
+  position: relative;
+  margin-bottom: 1.8em;
+  text-align: center;
+  border-bottom: 2px dotted #eea20a;
+  padding: 20px;
+  border-top: 2px dotted #eea20a;
+  counter-reset: h2counter;
+  z-index: 1;
+}
+.markdown-preview h1::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  width: 100px;
+  height: 60px;
+  background: url(https://s1.ax1x.com/2023/03/14/pplcbWV.png);
+  background-size: 100%;
+  z-index: -1;
+}
+.markdown-preview h2 {
+  font-size: 18px;
+  color: #eea20a;
+  counter-reset: h3counter;
+}
+.markdown-preview h2:before {
+  counter-increment: h2counter;
+  content: counter(h2counter);
+}
+.markdown-preview h3 {
+  font-size: 17px;
+  color: #555cbe;
+  counter-reset: h4counter;
+}
+.markdown-preview h3:before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter);
+}
+.markdown-preview h4 {
+  font-size: 15px;
+  color: #5a5a5a;
+}
+.markdown-preview h4:before {
+  counter-increment: h4counter;
+  content: "（" counter(h4counter) "）";
+  margin-left: -7px;
+  padding-right: 20px;
+}
+.markdown-preview h5,
+.markdown-preview h6 {
+  font-size: 15px;
+  color: #5a5a5a;
+  margin-bottom: 24px;
+}
+.markdown-preview h2::before,
+.markdown-preview h3::before,
+.markdown-preview h4::before,
+.markdown-preview h5::before,
+.markdown-preview h6::before {
+  min-width: 40px;
+  display: inline-block;
+  padding-right: 15px;
+}
+.markdown-preview h5:before {
+  content: "❥";
+  margin-left: 3px;
+  padding-right: 12px;
+}
+.markdown-preview h6:before {
+  content: "(❥)";
+}
+.markdown-preview strong {
+  /* color: #fa6069; */
+  color: #000000;
+  padding: 0 2px;
+}
+.markdown-preview em {
+  color: #3e2a6d;
+  font-style: normal;
+  padding: 2px;
+}
+.markdown-preview em strong {
+  color: #ff0000;
+  padding: 10px 0 0 0;
+  margin-left: -10px;
+  /* font-size: 14px; */
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+.markdown-preview em strong::after {
+  content: "」";
+}
+.markdown-preview em strong::before {
+  content: "「";
+}
+.markdown-preview del {
+  color: #f10a5f;
+}
+.markdown-preview a {
+  color: #00aaff;
+  text-decoration: none;
+}
+.markdown-preview a:hover {
+  color: #00aaff;
+  text-decoration: none;
+}
+.markdown-preview a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview p {
+  text-indent: 2em;
+}
+.markdown-preview img {
+  max-width: 100%;
+  border: 1px solid #f2f2f2;
+  border-left: 1px solid #d9d9d9;
+  border-radius: 2px;
+  margin-right: 3px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 8px;
+  vertical-align: bottom;
+  background-color: #ffffffc9;
+  box-shadow: 5px 8px 9px -1px rgba(0, 0, 0, 0.03), 0 3px 5px 0 rgba(0, 0, 0, 0.03), 2px 3px 4px -1px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+.markdown-preview img[src*='img_5'] {
+  width: 49%;
+}
+.markdown-preview img[src*='img_3'] {
+  width: 33%;
+}
+.markdown-preview img[src*='img_7'] {
+  width: 70%;
+}
+.markdown-preview ul.no-list,
+.markdown-preview ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview ul,
+.markdown-preview ol {
+  margin-left: -20px;
+  margin-top: 20px;
+}
+.markdown-preview ul li,
+.markdown-preview ol li {
+  margin-bottom: 18px;
+  list-style: inherit;
+}
+.markdown-preview ol ul,
+.markdown-preview ol ol,
+.markdown-preview ul ul,
+.markdown-preview ul ol {
+  padding-left: 5em;
+  margin-top: 8px;
+  /* font-size: 14px; */
+  font-size: 15px;
+}
+.markdown-preview ol ul li,
+.markdown-preview ol ol li,
+.markdown-preview ul ul li,
+.markdown-preview ul ol li {
+  margin-bottom: 7px;
+}
+.markdown-preview ul li {
+  list-style: square;
+}
+.markdown-preview ol li {
+  padding-left: 6px;
+}
+.markdown-preview .contains-task-list {
+  padding-left: 110px;
+}
+.markdown-preview .task-list-item {
+  list-style: none;
+}
+.markdown-preview li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview .task-list-item-checkbox {
+  margin: 0 0.2em 0.25em -1.8em;
+  vertical-align: middle;
+}
+.markdown-preview input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  /* font-size: 14px; */
+  font-size: 15px;
+  border-radius: 2px;
+}
+.markdown-preview input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #FFF;
+  border: 1px solid #555cbe;
+  border-radius: 2px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.markdown-preview input[type=checkbox]:checked::after {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  content: "✓";
+  color: #fa6069;
+  font-size: 22px;
+  font-weight: bold;
+  z-index: 2;
+}
+.markdown-preview blockquote {
+  color: #666;
+  padding: 8px 23px;
+  margin: 6px 0;
+  border-left: 4px solid #555cbe;
+  background-color: #f3f4ff;
+}
+.markdown-preview blockquote::after {
+  display: block;
+  content: '';
+}
+.markdown-preview blockquote > p {
+  margin: 16px 0;
+}
+.markdown-preview blockquote > p > code {
+  text-shadow: 0px 0px 1px #d7ffe5;
+}
+.markdown-preview blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview hr {
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.markdown-preview table {
+  border-top: 1.5pt solid;
+  border-bottom: 1.5pt solid;
+  font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "Source Han Serif SC", 'simsun', sans-serif;
+  text-align: center;
+  /*文字居中*/
+  page-break-inside: avoid;
+  /*禁止断页*/
+  width: 100%;
+  /*扩展表格宽度*/
+  overflow: auto;
+  margin-bottom: 8pt;
+  /*表格间距*/
+  border-collapse: collapse;
+}
+.markdown-preview table .katex {
+  font-size: 9pt;
+  /*表内公式*/
+}
+.markdown-preview table td {
+  font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "Source Han Serif SC", 'simsun', sans-serif;
+  font-size: 9pt;
+  /*表内文字*/
+}
+.markdown-preview table thead {
+  border-bottom: 0.75pt solid black;
+  /*三线表中间线*/
+}
+.markdown-preview table th {
+  font-family: 'Latin Modern Roman 10', 'LM Roman 10', "Times New Roman", Arial, "SimHei", "Source Han Serif SC", 'simsun', sans-serif;
+  font-size: 9pt;
+}
+.markdown-preview thead {
+  background: #eff3f5;
+  color: #555cbe;
+  text-align: left;
+}
+.markdown-preview tr:nth-child(2n) {
+  background-color: #fcfcfc;
+}
+.markdown-preview td {
+  min-width: 120px;
+}
+.markdown-preview table td,
+.markdown-preview table th {
+  padding: 12px 10px;
+  line-height: 24px;
+  border: #e0e0e0 solid 1px;
+}
+.markdown-preview dl {
+  padding: 0;
+}
+.markdown-preview dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview p mark {
+  padding: 1.5px 6px;
+  margin: 0 0.5em;
+  background-color: #ffff00dc;
+  color: #242424;
+}
+.markdown-preview pre > code {
+  font-size: 12px;
+  font-family: inherit;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 15px 12px;
+  margin: 0;
+  word-break: normal;
+  display: block;
+  overflow-x: auto;
+  padding-left: 2em;
+}
+.markdown-preview .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview .highlight pre,
+.markdown-preview pre {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  position: relative;
+}
+.markdown-preview .mume-header + pre {
+  margin-top: inherit;
+}
+.markdown-preview .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview pre code,
+.markdown-preview pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview pre code:before,
+.markdown-preview pre tt:before,
+.markdown-preview pre code:after,
+.markdown-preview pre tt:after {
+  content: normal;
+}
+.markdown-preview kbd {
+  color: #2f2f2f;
+  border: 1px solid #43484c;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+/* ----------------------- */
+/* 侧边栏收起时处理页面宽度 */
+[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: 50% !important;
+  transform: translateX(-50%);
+}
+/* 侧边栏打开时处理页面宽度 */
+[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+  left: calc(50% + 150px) !important;
+  transform: translateX(-50%);
+}
+/* ----------------------- */
+/* 目录贴边优化 */
+.md-sidebar-toc .md-toc {
+  font-size: 14px;
+  line-height: 2em;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 5px 8px 9px -1px rgba(0, 0, 0, 0.03), 0 3px 5px 0 rgba(0, 0, 0, 0.03), 2px 3px 4px -1px rgba(0, 0, 0, 0.04);
+  padding: 4px 8px 4px 4px !important;
+}
+.md-sidebar-toc .md-toc > details:nth-child(1) > summary::before {
+  content: '《';
+}
+.md-sidebar-toc .md-toc > details:nth-child(1) > summary::after {
+  content: ' 》';
+  padding-right: 5px;
+}
+.md-sidebar-toc .md-toc > details > summary + div {
+  margin-right: 16px;
+}
+.md-toc-link-wrapper {
+  display: block;
+  padding-right: 20px;
+  list-style: none!important;
+  border-bottom: 0;
+  color: #555cbe;
+}
+.md-toc-link-wrapper a {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  padding-right: 20px;
+  border-bottom: 0;
+}
+.md-toc-link-wrapper a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+code[class*="language-"] .token.comment,
+pre[class*="language-"] .token.comment,
+code[class*="language-"] .token.prolog,
+pre[class*="language-"] .token.prolog,
+code[class*="language-"] .token.doctype,
+pre[class*="language-"] .token.doctype,
+code[class*="language-"] .token.cdata,
+pre[class*="language-"] .token.cdata {
+  color: #999988;
+  /* font-style: italic */
+}
+code[class*="language-"] .token.punctuation .regex-source,
+pre[class*="language-"] .token.punctuation .regex-source {
+  color: #9f9f9f;
+}
+code[class*="language-"] .token.regex,
+pre[class*="language-"] .token.regex {
+  color: #ee82ee;
+}
+code[class*="language-"] .namespace,
+pre[class*="language-"] .namespace {
+  opacity: 0.7;
+}
+code[class*="language-"] .token.property,
+pre[class*="language-"] .token.property {
+  /* font-weight: bold; */
+  color: #986801;
+}
+code[class*="language-"] .token.boolean,
+pre[class*="language-"] .token.boolean,
+code[class*="language-"] .token.number,
+pre[class*="language-"] .token.number,
+code[class*="language-"] .token.function-name,
+pre[class*="language-"] .token.function-name {
+  color: #ff230f;
+}
+code[class*="language-"] .token.tag,
+pre[class*="language-"] .token.tag {
+  color: #ff230f;
+}
+code[class*="language-"] .token.symbol,
+pre[class*="language-"] .token.symbol {
+  color: #990073;
+}
+code[class*="language-"] .token.selector,
+pre[class*="language-"] .token.selector {
+  color: #ef21df;
+}
+code[class*="language-"] .token.attr-name,
+pre[class*="language-"] .token.attr-name {
+  color: #626262;
+}
+code[class*="language-"] .token.string,
+pre[class*="language-"] .token.string {
+  color: #3e9100;
+}
+code[class*="language-"] .token.char,
+pre[class*="language-"] .token.char {
+  color: #606aa1;
+}
+code[class*="language-"] .token.url,
+pre[class*="language-"] .token.url {
+  color: #888;
+}
+code[class*="language-"] .token.atrule,
+pre[class*="language-"] .token.atrule,
+code[class*="language-"] .token.attr-value,
+pre[class*="language-"] .token.attr-value {
+  color: #02b100;
+}
+code[class*="language-"] .token.keyword,
+pre[class*="language-"] .token.keyword {
+  color: #b81eec;
+  /* color: #ff2323; */
+}
+code[class*="language-"] .token.function,
+pre[class*="language-"] .token.function {
+  color: #3e9100;
+}
+code[class*="language-"] .token.maybe-class-name,
+pre[class*="language-"] .token.maybe-class-name {
+  color: #ffa000;
+}
+code[class*="language-"] .token.property-access,
+pre[class*="language-"] .token.property-access {
+  color: #ff230f;
+}
+code[class*="language-"] .token.class-name,
+pre[class*="language-"] .token.class-name {
+  /* text-decoration: underline; */
+  color: #ffa000;
+}
+code[class*="language-"] .token.variable,
+pre[class*="language-"] .token.variable {
+  color: #008080;
+}
+code[class*="language-"] .token.important,
+pre[class*="language-"] .token.important,
+code[class*="language-"] .token.bold,
+pre[class*="language-"] .token.bold {
+  font-weight: bold;
+}
+code[class*="language-"] .token.italic,
+pre[class*="language-"] .token.italic {
+  font-style: italic;
+}
+code[class*="language-"] .token.entity,
+pre[class*="language-"] .token.entity {
+  cursor: help;
+}
+/* ----------------------- */
+/* ---滚动条--- */
+/* 整个滚动条 */
+.md-sidebar-toc::-webkit-scrollbar,
+::-webkit-scrollbar {
+  /* 对应纵向滚动条的宽度 */
+  width: 8px !important;
+  /* 对应横向滚动条的宽度 */
+  height: 8px;
+  margin-right: 20px;
+}
+/* 滚动条上的滚动滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: #dedede !important;
+  border-radius: 10px !important;
+  border: 0 !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a1a1a1 !important;
+}
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: #fcfcfc !important;
+  border-radius: 32px;
+}
+/* ----------------------- */
+.bar_template {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  position: relative;
+  padding: 28px/2;
+  border-radius: 5px;
+}
+.bar_template .label {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.bar_template:before {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.def {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  position: relative;
+  padding: 28px/2;
+  border-radius: 5px;
+  background-color: #f3e9de;
+  border-color: #e6d303;
+}
+.def .label {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.def:before {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.def:before {
+  content: attr(name);
+  background-color: #d8b049;
+}
+.thm {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  position: relative;
+  padding: 28px/2;
+  border-radius: 5px;
+  background-color: #b2f1ce;
+  border-color: #e6d303;
+}
+.thm .label {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.thm:before {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.thm:before {
+  content: attr(name);
+  background-color: #42b51b;
+}
+.pf {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  position: relative;
+  padding: 28px/2;
+  border-radius: 5px;
+  background-color: aqua;
+  border-color: lightpink;
+}
+.pf .label {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.pf:before {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.pf:before {
+  content: "证明";
+  color: white;
+  background-color: #4949ff;
+}
+.pf:after {
+  content: "得证";
+  color: blue;
+}
+.question {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  position: relative;
+  padding: 28px/2;
+  border-radius: 5px;
+  background-color: #fcd2d9;
+}
+.question .label {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.question:before {
+  position: absolute;
+  left: 20px;
+  top: -15px;
+  color: white;
+  padding: 0px 6px 0px 6px;
+}
+.question:before {
+  content: attr(name);
+  color: white;
+  background-color: #fa97a8;
+}
+/* ----------------------- */
+/* 左右分栏 （注意div内需要一个tab，否则会影响标题显示） */
+.wrap2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap2 .box {
+  width: 48%;
+}
+.wrap2 .box:nth-child(1) {
+  padding-right: 2%;
+  border-right: 1px solid #ddd;
+}
+.wrap2 .box.lit3 {
+  width: 30%;
+}
+.wrap2 .box.lit7 {
+  width: 66%;
+}
+.wrap2 .box.lit4 {
+  width: 35%;
+}
+.wrap2 .box.lit6 {
+  width: 61%;
+}
+.wrap2 .box > p:first-child,
+.wrap2 .box > p:first-child em strong {
+  margin-top: 0;
+  padding-top: 0;
+}
+/* ----------------------- */
+/* ----------------------- */
+.fix {
+  position: fixed;
+  width: 200px;
+  height: 35px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  border-radius: 4px;
+  outline: 5px solid #ffeead;
+  background-color: white;
+  border: 1px solid #d9534f;
+  box-sizing: border-box;
+  padding: 5px;
+  transition: height 1s 1s;
+  overflow: hidden;
+}
+.fix > p,
+.fix strong {
+  margin-top: 0;
+  padding-top: 0;
+}
+.fix:hover {
+  height: 700px;
+  transition: all 1s 0s;
+  overflow: scroll;
+}
+/* ----------------------- */
+/* 宽度100， */
+.tabb {
+  min-width: 100px;
+  display: inline-block;
+  color: #555cbe;
+}
+/* 图片经过放大 */
+img:hover {
+  animation: imgbig 0s linear 0.8s 1 normal forwards;
+}
+@keyframes imgbig {
+  100% {
+    height: 80%;
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+}
+/* ----------------------- */
+/* 仅在浏览时使用（打印时无效） */
+@media screen {
+  .markdown-preview {
+    /*左右页边距*/
+    padding-left: 1.6cm !important;
+    padding-right: 1.6cm !important;
+    box-shadow: 0 0 24px 12px #CCCCCC;
+    /*页面阴影*/
+  }
+}
+@media print {
+  @page {
+    margin: 2.54cm 3.18cm !important;
+    size: A4;
+  }
+  body {
+    background-color: #ffffff;
+  }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+  body blockquote {
+    color: #9ba09d;
+  }
+  body pre {
+    page-break-inside: avoid;
+  }
+  body table {
+    display: table;
+  }
+  body img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  body pre,
+  body code {
+    word-wrap: break-word;
+    white-space: pre;
+  }
+}
+/* 引入 Lato 字体 */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_ROW9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  box-sizing: border-box;
+}
+.markdown-preview code {
+  border-radius: 2px;
+  color: #6a2be0;
+  font-size: 16px;
+  margin: 0 2px;
+  padding: 3px 5px;
+  white-space: pre-wrap;
+}
+.markdown-preview code,
+.markdown-preview pre {
+  background-color: #f8f8f8;
+  font-family: Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑';
+}
+.markdown-preview pre {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin: 1.2em 0;
+  overflow: auto;
+  padding: 0 22.4px;
+  padding: 0 1.4rem;
+  position: relative;
+  word-wrap: normal;
+}
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #898ac0;
+}
+.token.namespace {
+  color: #1625fdef !important;
+}
+.token.boolean,
+.token.number {
+  color: #d19a66 !important;
+}
+.token.punctuation {
+  color: #e44608 !important;
+}
+.token.property {
+  color: #dee033 !important;
+}
+.token.tag {
+  color: #1366b4 !important;
+}
+.token.string {
+  color: #98c376 !important;
+  color: var(--theme-color, #216949);
+}
+.token.selector {
+  color: #6679cc !important;
+}
+.token.attr-name {
+  color: #2973b7 !important;
+}
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.url {
+  color: #22a2c9 !important;
+}
+.token.attr-value,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #42b983 !important;
+  color: var(--theme-color, #42b983);
+}
+.token.keyword {
+  color: #c678dd !important;
+}
+.token.atrule,
+.token.regex,
+.token.statement {
+  color: #22a2c9 !important;
+}
+.token.placeholder,
+.token.variable {
+  color: #3d8fd1 !important;
+}
+.token.deleted {
+  text-decoration: line-through;
+}
+.token.inserted {
+  border-bottom: 1px dotted #202746 !important;
+  text-decoration: none;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.bold,
+.token.important {
+  font-weight: 700;
+}
+.token.important {
+  color: #a9cec0 !important;
+}
+.token.entity {
+  cursor: help;
+}
+.markdown-preview pre > code {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #0c0d0e;
+  border-radius: 2px;
+  color: #d19a66;
+  display: block;
+  font-family: Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑';
+  font-size: 15px !important;
+  font-size: 2rem;
+  line-height: 2em;
+  max-width: inherit;
+  overflow: inherit;
+  padding: 0.8em 1.4em;
+  white-space: pre;
+}
+.markdown-preview pre[class*="language"] {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  background-color: #0c0d0e;
+  border-radius: 10px 10px ;
+  color: #d19a66;
+  display: block;
+  font-family: Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑';
+  font-size: 15px !important;
+  font-size: 2rem;
+  line-height: 2em;
+  max-width: inherit;
+  overflow: inherit;
+  padding: 30px 1.4em 0px 30px !important;
+  white-space: pre;
+}
+.markdown-preview pre > code {
+  padding-left: 0;
+  padding-right: 0;
+}
+.markdown-preview code:after,
+.markdown-preview code:before {
+  letter-spacing: 0.8px;
+  letter-spacing: 0.05rem;
+}
+code .token {
+  -moz-osx-font-smoothing: initial;
+  -webkit-font-smoothing: initial;
+  min-height: 24px;
+  min-height: 1.5rem;
+}
+pre:after {
+  color: #ccc;
+  content: attr(data-lang);
+  font-size: 16px;
+  font-weight: 600;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em !important;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+pre:before {
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  top: 10px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+pre {
+  background: #21252b;
+  border-radius: 5px;
+  font: 15px/22px "Microsoft YaHei", Arial, Sans-Serif;
+  line-height: 1.4;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto ;
+  text-shadow: none;
+  color: #000;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+}
+pre code::-webkit-scrollbar {
+  height: 10x !important;
+  width: 10x !important;
+  background-color: #1d1f21 !important;
+}
+pre code::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 10px !important;
+  background-color: #21252b !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+pre code::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+  background-color: #21252b !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}

@@ -106,11 +106,7 @@
 
 <section class="slide level1">
 
-<!-- slide -->
 <p>% Markdown制作幻灯片 % Kiwi % Feb 2025</p>
-<!-- slide -->
-<p>% 目录 % Kiwi % Feb 2025 [toc]</p>
-<!-- slide -->
 </section>
 <section id="环境准备" class="slide level1">
 <h1>环境准备</h1>
@@ -130,34 +126,34 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><
 class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>% 这个标题有 2 个 classes {.class1 .class2}</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span></code></pre></div>
-<!-- slide -->
 </section>
 <section id="代码实例" class="slide level1">
 <h1>代码实例</h1>
 <pre><code>*这会是 斜体 的文字*
 _这会是 斜体 的文字_
+  
 **这会是 粗体 的文字**
 __这会是 粗体 的文字__
-
+  
 _你也 **组合** 这些符号_
-
+  
 ~~这个文字将会被横线删除~~</code></pre>
 </section>
 <section id="结果输出" class="slide level1">
 <h1>结果输出</h1>
-<p><em>这会是 斜体 的文字</em> <em>这会是 斜体 的文字</em>
-<strong>这会是 粗体 的文字</strong> <strong>这会是 粗体
+<p><em>这会是 斜体 的文字</em> <em>这会是 斜体 的文字</em></p>
+<p><strong>这会是 粗体 的文字</strong> <strong>这会是 粗体
 的文字</strong></p>
 <p><em>你也 <strong>组合</strong> 这些符号</em></p>
 <p><del>这个文字将会被横线删除</del></p>
-<!-- slide -->
-<p>上标：X<sub>2</sub>，下标：O<sup>2</sup>
-<strong>缩写(同HTML的abbr标签)</strong></p>
+<p>上标：X<sub>2</sub>，下标：O<sup>2</sup></p>
+<p><strong>缩写(同HTML的abbr标签)</strong></p>
 <blockquote>
 <p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启</p>
 </blockquote>
-<!-- slide -->
-<h2 id="引用-blockquotes">引用 Blockquotes</h2>
+</section>
+<section id="引用-blockquotes" class="slide level1">
+<h1>引用 Blockquotes</h1>
 <blockquote>
 <p>引用文本 Blockquotes</p>
 </blockquote>
@@ -165,37 +161,41 @@ _你也 **组合** 这些符号_
 <blockquote>
 <p>引用：如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可</p>
 </blockquote>
-<!-- slide -->
-<h2 id="锚点与链接-links">锚点与链接 Links</h2>
+</section>
+<section id="锚点与链接-links" class="slide level1">
+<h1>锚点与链接 Links</h1>
 <p><a href="http://baidu.com/">普通链接</a></p>
 <p><a href="http://baidu.com/"
 title="普通链接带标题">普通链接带标题</a></p>
 <p>直接链接：&lt;https: //github.com&gt;</p>
-<!-- [锚点链接][anchor-id] -->
-<!-- [anchor-id]: http://www.this-anchor-link.com/ -->
-<!-- [mailto:test.test@gmail.com](mailto:test.test@gmail.com) -->
+<p><a
+href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a></p>
 <p>GFM a-tail link <span class="citation"
 data-cites="pandao">@pandao</span> 邮箱地址自动链接 test.test@gmail.com
 www@vip.qq.com</p>
 <blockquote>
-<p><span class="citation" data-cites="pandao">@pandao</span>
-<!-- slide --> ## 多语言代码高亮 Codes</p>
+<p><span class="citation" data-cites="pandao">@pandao</span></p>
 </blockquote>
-<h4 id="行内代码-inline-code">行内代码 Inline code</h4>
+</section>
+<section id="多语言代码高亮-codes" class="slide level1">
+<h1>多语言代码高亮 Codes</h1>
+</section>
+<section id="行内代码-inline-code" class="slide level1">
+<h1>行内代码 Inline code</h1>
 <p>执行命令：<code>npm install marked</code></p>
-<h4 id="缩进风格">缩进风格</h4>
+</section>
+<section id="缩进风格" class="slide level1">
+<h1>缩进风格</h1>
 <p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本
 ( Preformatted Text ) 的功能。</p>
 <pre><code>&lt;?php
     echo &quot;Hello world!&quot;;
 ?&gt;</code></pre>
-<!-- slide -->
 <p>预格式化文本：</p>
 <pre><code>| First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |</code></pre>
-<!-- slide -->
 </section>
 <section id="js代码" class="slide level1">
 <h1>JS代码</h1>
@@ -226,7 +226,6 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> testBox <span class="op">=</span> <span class="fu">box</span>()<span class="op">;</span></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>testBox<span class="op">.</span><span class="fu">add</span>(<span class="st">&quot;jQuery&quot;</span>)<span class="op">.</span><span class="fu">remove</span>(<span class="st">&quot;jQuery&quot;</span>)<span class="op">;</span></span></code></pre></div>
-<!-- slide -->
 </section>
 <section id="html-代码-html-codes" class="slide level1">
 <h1>HTML 代码 HTML codes</h1>
@@ -244,11 +243,11 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-family</span><span class="ch">:</span> <span class="st">&quot;Microsoft Yahei&quot;</span><span class="op">,</span> <span class="dv">Tahoma</span><span class="op">,</span> <span class="st">&quot;Hiragino Sans GB&quot;</span><span class="op">,</span> <span class="dv">Arial</span><span class="op">;</span></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">background</span><span class="ch">:</span> <span class="cn">#fff</span><span class="op">;</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    ul {</span>
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">list-style</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    img {</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">border</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
@@ -260,26 +259,25 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;text-green&quot;</span><span class="dt">&gt;</span>Plain text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-<!-- slide -->
 </section>
 <section id="图片-images" class="slide level1">
 <h1>图片 Images</h1>
 <p>Image:</p>
-<h2 data-background-image="assets/2025-02-13-21-47-36-575429.jpg"
+<h2 data-background-image="assets/2025-02-13-23-04-18-465298.jpg"
 data-background-size="contain" id="section"></h2>
 <blockquote>
-<p>Follow your heart. <!-- slide --></p>
+<p>Follow your heart.</p>
 </blockquote>
-<h2 data-background-image="assets/2025-02-13-21-47-37-902822.jpg"
+<h2 data-background-image="assets/2025-02-13-23-04-19-511520.jpg"
 data-background-size="contain" id="section-1"></h2>
 <blockquote>
-<p>图为：厦门白城沙滩 <!-- slide --></p>
+<p>图为：厦门白城沙滩</p>
 </blockquote>
 <p>图片加链接 (Image + Link)：</p>
-<p>[<img data-src="assets/2025-02-13-21-47-39-792583.jpg" alt="am" />]
+<p>[<img data-src="assets/2025-02-13-23-04-21-072597.jpg" alt="am" />]
 “李健首张专辑《似水流年》封面”</p>
 <blockquote>
-<p>图为：李健首张专辑《似水流年》封面 <!-- slide --></p>
+<p>图为：李健首张专辑《似水流年》封面</p>
 </blockquote>
 </section>
 <section id="列表-lists" class="slide level1">
@@ -289,16 +287,18 @@ data-background-size="contain" id="section-1"></h2>
 <ul>
 <li class="fragment">列表一</li>
 <li class="fragment">列表二</li>
-<li class="fragment">列表三 <!-- slide --> ## 无序列表（星号）Unordered
-Lists (*)</li>
+<li class="fragment">列表三</li>
+</ul>
+<h4 id="无序列表星号unordered-lists">无序列表（星号）Unordered Lists
+(*)</h4>
+<ul>
 <li class="fragment">列表一</li>
 <li class="fragment">列表二</li>
 <li class="fragment">列表三</li>
 </ul>
-<!-- slide -->
-<h2
+<h4
 id="无序列表加号和嵌套unordered-lists">无序列表（加号和嵌套）Unordered
-Lists (+)</h2>
+Lists (+)</h4>
 <ul>
 <li class="fragment">列表一</li>
 <li class="fragment">列表二
@@ -314,15 +314,15 @@ Lists (+)</h2>
 <li class="fragment">列表三</li>
 </ul></li>
 </ul>
-<!-- slide -->
-<h2 id="有序列表-ordered-lists--">有序列表 Ordered Lists (-)</h2>
+<h4 id="有序列表-ordered-lists--">有序列表 Ordered Lists (-)</h4>
 <ol type="1">
 <li class="fragment">第一行</li>
 <li class="fragment">第二行</li>
 <li class="fragment">第三行</li>
 </ol>
-<!-- slide -->
-<h2 id="gfm-task-list">GFM task list</h2>
+</section>
+<section id="gfm-task-list" class="slide level1">
+<h1>GFM task list</h1>
 <ul class="task-list">
 <li class="fragment"><label><input type="checkbox" checked="" />GFM task
 list 1</label></li>
@@ -347,272 +347,21 @@ list 2</label></li>
 4-2</label></li>
 </ul></li>
 </ul>
-<!-- slide -->
-<h2 id="绘制三线表格-tables">绘制三线表格 Tables</h2>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th style="text-align: right;">价格</th>
-<th style="text-align: center;">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>计算机</td>
-<td style="text-align: right;">$1600</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr>
-<td>手机</td>
-<td style="text-align: right;">$12</td>
-<td style="text-align: center;">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td style="text-align: right;">$1</td>
-<td style="text-align: center;">234</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
-<!-- slide -->
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
-<!-- slide -->
-<table>
-<thead>
-<tr>
-<th>Function name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>help()</code></td>
-<td>Display the help window.</td>
-</tr>
-<tr>
-<td><code>destroy()</code></td>
-<td><strong>Destroy your computer!</strong></td>
-</tr>
-</tbody>
-</table>
-<!-- slide -->
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Left-Aligned</th>
-<th style="text-align: center;">Center Aligned</th>
-<th style="text-align: right;">Right Aligned</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">col 3 is</td>
-<td style="text-align: center;">some wordy text</td>
-<td style="text-align: right;">$1600</td>
-</tr>
-<tr>
-<td style="text-align: left;">col 2 is</td>
-<td style="text-align: center;">centered</td>
-<td style="text-align: right;">$12</td>
-</tr>
-<tr>
-<td style="text-align: left;">zebra stripes</td>
-<td style="text-align: center;">are neat</td>
-<td style="text-align: right;">$1</td>
-</tr>
-</tbody>
-</table>
-<!-- slide -->
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th style="text-align: right;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Computer</td>
-<td style="text-align: right;">$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td style="text-align: right;">$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td style="text-align: right;">$1</td>
-</tr>
-</tbody>
-</table>
-<!-- slide -->
-<h2 id="特殊符号-html-entities-codes">特殊符号 HTML Entities Codes</h2>
-<p>© &amp; ¨ ™ ¡ £ &amp; &lt; &gt; ¥ € ® ± ¶ § ¦ ¯ « ·</p>
-<p>X² Y³ ¾ ¼ × ÷ »</p>
-<p>18ºC ” ’</p>
-<!-- slide -->
-<h2 id="反斜杠-escape">反斜杠 Escape</h2>
-<p>*literal asterisks*</p>
-<h2 id="科学公式-texkatex">科学公式 TeX(KaTeX)</h2>
-<p><span
-class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
-<p>行内的公式<span
-class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span>行内的公式，行内的<span
-class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span>公式。</p>
-<p><span class="math display"><em>x</em> &gt; <em>y</em></span></p>
-<!-- $$\(\sqrt{3x-1}+(1+x)^2\)$$ -->
-<!-- $$sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$ -->
-<!-- slide -->
-<p>多行公式：</p>
-<pre class="math"><code>\displaystyle
-\left( \sum\_{k=1}^n a\_k b\_k \right)^2
-\leq
-\left( \sum\_{k=1}^n a\_k^2 \right)
-\left( \sum\_{k=1}^n b\_k^2 \right)</code></pre>
-<!-- slide -->
-<pre class="katex"><code>\displaystyle 
-    \frac{1}{
-        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
-        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
-        1+\frac{e^{-6\pi}}
-        {1+\frac{e^{-8\pi}}
-         {1+\cdots} }
-        } 
-    }</code></pre>
-<!-- slide -->
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode latex"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>f(x) = <span class="fu">\int</span>_{-<span class="fu">\infty</span>}^<span class="fu">\infty</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\hat</span> f(<span class="fu">\xi</span>)<span class="fu">\,</span>e^{2 <span class="fu">\pi</span> i <span class="fu">\xi</span> x}</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\,</span>d<span class="fu">\xi</span></span></code></pre></div>
-<!-- slide -->
-<h2 id="绘制流程图-flowchart">绘制流程图 Flowchart</h2>
-<pre class="flow"><code>st=&gt;start: 用户登陆
-op=&gt;operation: 登陆操作
-cond=&gt;condition: 登陆成功 Yes or No?
-e=&gt;end: 进入后台
-
-st-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;op</code></pre>
-<!-- slide -->
-<h2 id="绘制序列图-sequence-diagram">绘制序列图 Sequence Diagram</h2>
-<pre class="seq"><code>Andrew-&gt;China: Says Hello 
-Note right of China: China thinks\nabout it 
-China--&gt;Andrew: How are you? 
-Andrew-&gt;&gt;China: I am good thanks!</code></pre>
-<!-- slide -->
-<h2 id="列表">列表</h2>
-<h4 id="无序列表">无序列表</h4>
-<ul>
-<li class="fragment">Item 1</li>
-<li class="fragment">Item 2
-<ul>
-<li class="fragment">Item 2a</li>
-<li class="fragment">Item 2b #### 有序列表</li>
-</ul></li>
-</ul>
-<ol type="1">
-<li class="fragment">Item 1</li>
-<li class="fragment">Item 2</li>
-<li class="fragment">Item 3
-<ol type="1">
-<li class="fragment">Item 3a</li>
-<li class="fragment">Item 3b <!-- slide --> ## 环境准备</li>
-</ol></li>
-</ol>
-<h4 id="visual-studio-code-编辑器安装">Visual Studio Code
-编辑器安装</h4>
-<h4 id="markdown-preview-enhanced-扩展安装">Markdown Preview Enhanced
-扩展安装</h4>
-<h4 id="pandoc安装">Pandoc安装</h4>
-<p><code>scoop</code> <!-- slide --> ## 基本语法</p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>% 一级标题</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu"># 二级标题</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 三级标题</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">##### 五级标题</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">###### 六级标题</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>正文</span></code></pre></div>
-<!-- slide -->
-<h2 id="markdown-基本语法">Markdown 基本语法</h2>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 这里是引用</span></span></code></pre></div>
-<!-- slide -->
-<h2 id="markdown-基本语法-1">Markdown 基本语法</h2>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 表格</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 实验组 <span class="pp">|</span> 时间  <span class="pp">|</span>   数量 <span class="pp">|</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="pp">| :-----</span> <span class="pp">| :---:</span> <span class="pp">| -----:</span> <span class="pp">|</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M1     <span class="pp">|</span>  1h   <span class="pp">|</span> 120000 <span class="pp">|</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M2     <span class="pp">|</span>  2h   <span class="pp">|</span> 140000 <span class="pp">|</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> M3     <span class="pp">|</span>  3h   <span class="pp">|</span> 160000 <span class="pp">|</span></span></code></pre></div>
-<!-- slide -->
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 下面是分割线</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 下面也是分割线</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div>
-<!-- slide -->
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 块内公式</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 行内公式</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$</span></code></pre></div>
-<!-- slide -->
-<h4 id="mpe-幻灯片分割">MPE 幻灯片分割</h4>
-<div class="sourceCode" id="cb18"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>% Hi here</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>let us go</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- slide --&gt;</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>Thank you!</span></code></pre></div>
-<!-- slide -->
+</section>
+<section id="绘制三线表格-tables" class="slide level1">
+<h1>绘制三线表格 Tables</h1>
+</section>
+<section id="mpe-幻灯片分割" class="slide level1">
+<h1>MPE 幻灯片分割</h1>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- //ppt --&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>% Hi here</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>% Kiwi</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>% Feb 2025</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- //ppt --&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>let us go</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- //ppt --&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>Thank you!</span></code></pre></div>
 <p>% Thank you! % Kiwi % Feb 2025</p>
 <h2 id="the-end">The End</h2>
 <p>Thanks for your time!</p>
