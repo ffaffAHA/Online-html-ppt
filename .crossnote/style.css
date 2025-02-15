@@ -327,6 +327,133 @@ body {
 .markdown-preview img[src*='img_7'] {
   width: 70%;
 }
+.markdown-preview .katex,
+.markdown-preview .MathJax {
+  font-size: 1.05em !important;
+  color: #2f4f4f;
+  line-height: 1.6;
+}
+.markdown-preview .katex.display,
+.markdown-preview .MathJax.display {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 0.2em;
+}
+.markdown-preview .katex-display,
+.markdown-preview .MathJax-display {
+  display: block;
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 1em;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 3px solid #e0e0e0;
+  overflow-x: auto;
+}
+.markdown-preview .katex-display .eqno,
+.markdown-preview .MathJax-display .eqno {
+  float: right;
+  color: #555cbe;
+  font-size: 0.9em;
+  padding-left: 1em;
+}
+.markdown-preview .katex .mtext,
+.markdown-preview .MathJax .mtext {
+  font-family: "Times New Roman", serif !important;
+  color: #1c2f2f;
+}
+.markdown-preview .katex .mop,
+.markdown-preview .MathJax .mop {
+  color: #228b22;
+}
+.markdown-preview .katex .mopen,
+.markdown-preview .MathJax .mopen,
+.markdown-preview .katex .mclose,
+.markdown-preview .MathJax .mclose {
+  color: #b22222;
+}
+.markdown-preview .mtable {
+  padding: 0.5em;
+  margin: 0.5em auto;
+  border: 1px solid rgba(224, 224, 224, 0.3);
+  border-radius: 3px;
+}
+.markdown-preview .mfrac .frac-line {
+  border-bottom-width: 1.2px !important;
+}
+.markdown-preview .sqrt .sqrt-sign {
+  transform: translateY(0.1em);
+}
+.markdown-preview .katex-display {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.markdown-preview .katex-display:hover {
+  transform: translateX(10px);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.markdown-preview .katex-display:hover::after {
+  content: "复制公式";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #555cbe;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .markdown-preview .katex,
+  .markdown-preview .MathJax {
+    font-size: 0.95em !important;
+  }
+  .markdown-preview .katex-display,
+  .markdown-preview .MathJax-display {
+    padding: 0.8em;
+    margin: 1em 0;
+    overflow-x: auto;
+  }
+  .markdown-preview .katex-display::-webkit-scrollbar,
+  .markdown-preview .MathJax-display::-webkit-scrollbar {
+    height: 4px;
+  }
+  .markdown-preview .katex-display:hover::after {
+    display: none;
+  }
+}
+@media print {
+  .markdown-preview .katex,
+  .markdown-preview .MathJax {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  .markdown-preview .katex-display,
+  .markdown-preview .MathJax-display {
+    background: transparent !important;
+    border-left-color: #ccc !important;
+  }
+  .markdown-preview .katex .eqno,
+  .markdown-preview .MathJax .eqno {
+    color: #666 !important;
+  }
+}
+.markdown-preview body {
+  counter-reset: equation;
+}
+.markdown-preview .katex-display {
+  counter-increment: equation;
+}
+.markdown-preview .katex-display .eqno::before {
+  content: "(" counter(equation) ")";
+}
+.markdown-preview pre code .katex {
+  font-size: 0.9em !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
 .markdown-preview .bar_template {
   margin-top: 20px;
   margin-bottom: 20px;
