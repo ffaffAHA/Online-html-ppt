@@ -21,7 +21,7 @@
 
 
     "markdown-preview-enhanced.pandocMarkdownFlavor": "markdown+raw_tex+tex_math_dollars",
-    // "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },

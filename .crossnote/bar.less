@@ -188,4 +188,33 @@ img:hover {
   }
 }
 
+
+/* 基础样式 */
+.admonition {
+  border-left: 4px solid;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* 类型配色 */
+.admonition.tip { border-color: #42b983; }
+.admonition.note { border-color: #3498db; }
+.admonition.info { border-color: #909399; }
+.admonition.warning { border-color: #e6a23c; }
+.admonition.danger { border-color: #f56c6c; }
+.admonition.success { border-color: #67c23a; }
+
+/* 折叠功能 */
+.admonition.collapsible .admonition-content {
+  display: none;
+}
+.admonition.collapsible.open .admonition-content {
+  display: block;
+}
+.collapse-handle {
+  cursor: pointer;
+  float: right;
+}
 /* ----------------------- */

@@ -324,14 +324,6 @@ body {
   border-radius: 5px;
   padding: 2em calc(34% - 536px + 2em);
   box-sizing: border-box;
-  /* ----------------------- */
-  /* 左右分栏 （注意div内需要一个tab，否则会影响标题显示） */
-  /* ----------------------- */
-  /* ----------------------- */
-  /* ----------------------- */
-  /* 宽度100， */
-  /* 图片经过放大 */
-  /* ----------------------- */
 }
 .markdown-preview > :first-child {
   margin-top: 0;
@@ -737,220 +729,6 @@ body {
   font-size: 0.9em !important;
   background-color: transparent !important;
   padding: 0 !important;
-}
-.markdown-preview .bar_template {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  position: relative;
-  padding: 28px/2;
-  border-radius: 5px;
-}
-.markdown-preview .bar_template .label {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .bar_template:before {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .def {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  position: relative;
-  padding: 28px/2;
-  border-radius: 5px;
-  background-color: #f3e9de;
-  border-color: #e6d303;
-}
-.markdown-preview .def .label {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .def:before {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .def:before {
-  content: attr(name);
-  background-color: #d8b049;
-}
-.markdown-preview .thm {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  position: relative;
-  padding: 28px/2;
-  border-radius: 5px;
-  background-color: #b2f1ce;
-  border-color: #e6d303;
-}
-.markdown-preview .thm .label {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .thm:before {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .thm:before {
-  content: attr(name);
-  background-color: #42b51b;
-}
-.markdown-preview .pf {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  position: relative;
-  padding: 28px/2;
-  border-radius: 5px;
-  background-color: aqua;
-  border-color: lightpink;
-}
-.markdown-preview .pf .label {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .pf:before {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .pf:before {
-  content: "证明";
-  color: white;
-  background-color: #4949ff;
-}
-.markdown-preview .pf:after {
-  content: "得证";
-  color: blue;
-}
-.markdown-preview .question {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid;
-  position: relative;
-  padding: 28px/2;
-  border-radius: 5px;
-  background-color: #fcd2d9;
-}
-.markdown-preview .question .label {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .question:before {
-  position: absolute;
-  left: 20px;
-  top: -15px;
-  color: white;
-  padding: 0px 6px 0px 6px;
-}
-.markdown-preview .question:before {
-  content: attr(name);
-  color: white;
-  background-color: #fa97a8;
-}
-.markdown-preview .wrap2 {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.markdown-preview .wrap2 .box {
-  width: 48%;
-}
-.markdown-preview .wrap2 .box:nth-child(1) {
-  padding-right: 2%;
-  border-right: 1px solid #ddd;
-}
-.markdown-preview .wrap2 .box.lit3 {
-  width: 30%;
-}
-.markdown-preview .wrap2 .box.lit7 {
-  width: 66%;
-}
-.markdown-preview .wrap2 .box.lit4 {
-  width: 35%;
-}
-.markdown-preview .wrap2 .box.lit6 {
-  width: 61%;
-}
-.markdown-preview .wrap2 .box > p:first-child,
-.markdown-preview .wrap2 .box > p:first-child em strong {
-  margin-top: 0;
-  padding-top: 0;
-}
-.markdown-preview .fix {
-  position: fixed;
-  width: 200px;
-  height: 35px;
-  bottom: 10px;
-  right: 10px;
-  z-index: 999;
-  border-radius: 4px;
-  outline: 5px solid #ffeead;
-  background-color: white;
-  border: 1px solid #d9534f;
-  box-sizing: border-box;
-  padding: 5px;
-  transition: height 1s 1s;
-  overflow: hidden;
-}
-.markdown-preview .fix > p,
-.markdown-preview .fix strong {
-  margin-top: 0;
-  padding-top: 0;
-}
-.markdown-preview .fix:hover {
-  height: 700px;
-  transition: all 1s 0s;
-  overflow: scroll;
-}
-.markdown-preview .tabb {
-  min-width: 100px;
-  display: inline-block;
-  color: #555cbe;
-}
-.markdown-preview img:hover {
-  animation: imgbig 0s linear 0.8s 1 normal forwards;
-}
-@keyframes imgbig {
-  100% {
-    height: 80%;
-    width: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    object-fit: contain;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-  }
 }
 @font-face {
   font-family: 'Roboto Mono';
@@ -1452,7 +1230,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 <h2 id="cadcam基础">CAD/CAM基础</h2>
 <h2 id="材料加工过程数字模拟">材料加工过程数字模拟</h2>
 <h2 id="材料成形与连接技术">材料成形与连接技术</h2>
-<h1 id="什么是加工硬化原因对金属的影响">什么是加工硬化？原因？对金属的影响。</h1>
+<h1 id="什么是加工硬化原因对金属的影响">什么是加工硬化？原因？对金属的影响</h1>
 <p>加工硬化（形变强化）是金属在塑性变形过程中，强度和硬度增加而塑性降低的现象。</p>
 <h2 id="原因">原因</h2>
 <ol type="1">
@@ -1489,16 +1267,65 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>锻造</li>
 <li>轧制</li>
 <li>挤压</li>
+<li><strong>锻造与轧制的区别</strong>
+<ul>
+<li>锻造：使用冲击或压力使金属变形，可加工大型工件</li>
+<li>轧制：通过旋转的轧辊对金属坯料进行轧压，主要生产板材、型材</li>
+<li>挤压：使金属通过一定形状的模孔，制造各种截面形状的长条形材</li>
+</ul></li>
+<li><strong>工艺特点</strong>
+<ul>
+<li>锻造：变形不连续，设备简单，适用于单件生产</li>
+<li>轧制：连续生产，生产效率高，适用于批量生产</li>
+<li>挤压：变形量大，表面质量好，适合复杂截面</li>
+</ul></li>
 </ul></li>
 <li><strong>拉伸变形</strong>
 <ul>
 <li>拉拔</li>
 <li>拉深</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>拉拔与拉深的区别</strong>
+<ul>
+<li>拉拔：将金属棒、管、丝通过模具孔道使其横截面减小、长度增加的加工方法</li>
+<li>拉深：将平板坯料加工成空心件的塑性成形方法</li>
+<li>主要变形：
+<ul>
+<li>拉拔以截面减小为主</li>
+<li>拉深以形状改变为主</li>
 </ul></li>
+<li>应用：
+<ul>
+<li>拉拔用于制造金属丝、管、棒</li>
+<li>拉深用于制造各类容器、箱体</li>
+</ul></li>
+</ul></li>
+</ol></li>
 <li><strong>弯曲变形</strong>
 <ul>
 <li>弯曲成形</li>
 <li>卷曲成形</li>
+<li><strong>弯曲成形与卷曲成形的区别</strong>
+<ul>
+<li>弯曲成形：
+<ul>
+<li>局部变形，形成角度</li>
+<li>变形量较小</li>
+<li>主要用于制造<strong>角钢、槽钢</strong>等</li>
+</ul></li>
+<li>卷曲成形：
+<ul>
+<li>连续变形，形成圆弧形</li>
+<li>变形量较大</li>
+<li>主要用于制造<strong>圆管、螺旋管</strong>等</li>
+</ul></li>
+<li>工艺特点：
+<ul>
+<li>弯曲：设备简单，精度要求低</li>
+<li>卷曲：需专用设备，精度要求高</li>
+</ul></li>
+</ul></li>
 </ul></li>
 <li><strong>剪切变形</strong>
 <ul>
@@ -1506,6 +1333,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>冲裁</li>
 </ul></li>
 </ol>
+<div kroki="true" class="ditaa"><!--?xml version="1.0" encoding="UTF-8"?--><svg xmlns="http://www.w3.org/2000/svg" width="220" height="126" version="1.0" shape-rendering="geometricPrecision"><defs><filter id="shadowBlur" x="0" y="0" width="200%" height="200%"><feOffset in="SourceGraphic" dx="3.0003002" dy="3.0003002" result="offOut"></feOffset><feGaussianBlur in="offOut" stdDeviation="3"></feGaussianBlur></filter></defs><g stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="0" y="0" width="220" height="126" style="fill: #ffffff"></rect><path stroke="#969696" fill="#969696" filter="url(#shadowBlur)" d="M105.0 35.0 L185.0 35.0 L185.0 91.0 L105.0 91.0 z"></path><path stroke="#000000" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" fill="white" d="M105.0 35.0 L185.0 35.0 L185.0 91.0 L105.0 91.0 z"></path></g></svg></div>
 <h3 id="按温度特征分类">按温度特征分类</h3>
 <ol type="1">
 <li><strong>热加工</strong>
@@ -1723,7 +1551,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>通过检测线圈阻抗变化判断裂纹</li>
 </ul></li>
 </ol>
-<h2 id="说明增材恒材减材加工的特点举例说明各自的实际应用领域">说明增材，恒材，减材加工的特点，举例说明各自的实际应用领域。</h2>
+<h2 id="说明增材恒材减材加工的特点举例说明各自的实际应用领域">说明增材，恒材，减材加工的特点，举例说明各自的实际应用领域</h2>
 <h3 id="增材加工">增材加工</h3>
 <ol type="1">
 <li><strong>特点</strong>
@@ -1796,7 +1624,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>表面处理</li>
 </ul></li>
 </ol>
-<h2 id="简形件拉深的过程中易产生哪些缺陷以及如何防止或简述焊接残余变形的分类并提出焊后矫正焊接残余变形的措施">简形件拉深的过程中易产生哪些缺陷？以及如何防止或简述焊接残余变形的分类，并提出焊后矫正焊接残余变形的措施。</h2>
+<h2 id="简形件拉深的过程中易产生哪些缺陷以及如何防止或简述焊接残余变形的分类并提出焊后矫正焊接残余变形的措施">简形件拉深的过程中易产生哪些缺陷？以及如何防止或简述焊接残余变形的分类，并提出焊后矫正焊接残余变形的措施</h2>
 <h3 id="拉深缺陷及防止措施">拉深缺陷及防止措施</h3>
 <ol type="1">
 <li><strong>起皱</strong>
@@ -1948,7 +1776,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 </ul></li>
 </ol>
 <h2 id="说明cadcam的中文意思简述cadcam系统的组成部分说明auto-cad-ug-软件-proengineer-软件属于cadcam系统中哪一部分">说明CAD/CAM的中文意思；简述CAD/CAM系统的组成部分；说明Auto-CAD、UG
-软件、Pro/ENGINEER 软件属于CAD/CAM系统中哪一部分。</h2>
+软件、Pro/ENGINEER 软件属于CAD/CAM系统中哪一部分</h2>
 <div class="mermaid">graph TD
     A[CAD/CAM系统组成] --&gt; B[硬件系统]
     A --&gt; C[软件系统]
@@ -1998,7 +1826,7 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>提供完整的产品设计到制造解决方案</li>
 </ul></li>
 </ol>
-<h2 id="数值模拟可以用在材料成型领域的产品设计和性能预测请结合实例介绍如何使用和数值模拟的优势">数值模拟可以用在材料成型领域的产品设计和性能预测，请结合实例介绍如何使用和数值模拟的优势。</h2>
+<h2 id="数值模拟可以用在材料成型领域的产品设计和性能预测请结合实例介绍如何使用和数值模拟的优势">数值模拟可以用在材料成型领域的产品设计和性能预测，请结合实例介绍如何使用和数值模拟的优势</h2>
 <h3 id="分子动力学模拟在材料成型中的应用">分子动力学模拟在材料成型中的应用</h3>
 <h4 id="基本原理">基本原理</h4>
 <ol type="1">
@@ -2145,6 +1973,607 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>动态过程模拟</li>
 </ul></li>
 </ol>
+<h1 id="section">2023</h1>
+<h2 id="晶体缺陷类型有哪几种如何利用和消除">晶体缺陷类型有哪几种？如何利用和消除？</h2>
+<p>晶体缺陷主要分为以下几种类型：</p>
+<h3 id="点缺陷">点缺陷</h3>
+<ul>
+<li>空位缺陷：原子从正常晶格位置缺失</li>
+<li>间隙原子：原子占据晶格间隙位置</li>
+<li>替代原子：其他原子替代原有晶格位置</li>
+</ul>
+<h3 id="线缺陷">线缺陷</h3>
+<ul>
+<li>刃型位错</li>
+<li>螺型位错</li>
+<li>混合型位错</li>
+</ul>
+<h3 id="面缺陷">面缺陷</h3>
+<ul>
+<li>晶界</li>
+<li>孪晶界</li>
+<li>堆垛层错</li>
+</ul>
+<h3 id="体缺陷">体缺陷</h3>
+<ul>
+<li>空洞</li>
+<li>夹杂物</li>
+</ul>
+<h3 id="利用方式">利用方式</h3>
+<ol type="1">
+<li>提高材料强度（位错强化）</li>
+<li>改善半导体性能（掺杂）</li>
+<li>控制材料塑性变形</li>
+</ol>
+<h3 id="消除方法">消除方法</h3>
+<ol type="1">
+<li>热处理退火</li>
+<li>区域熔炼提纯</li>
+<li>添加特定元素</li>
+<li>控制生长条件</li>
+</ol>
+<h2 id="简述晶粒大小对力学性能的影响如何细化晶粒">简述晶粒大小对力学性能的影响，如何细化晶粒？</h2>
+<h3 id="晶粒大小的影响">晶粒大小的影响</h3>
+<ul>
+<li>强度和硬度：晶粒越细，强度和硬度越高</li>
+<li>塑性：细晶粒通常具有较好的塑性</li>
+<li>韧性：适中的晶粒尺寸有利于提高韧性</li>
+<li>疲劳性能：细晶粒能提高疲劳强度</li>
+</ul>
+<h3 id="hall-petch关系">Hall-Petch关系</h3>
+<p><span class="math display">\[ \sigma_y = \sigma_0 +
+\frac{k}{\sqrt{d}} \]</span> 其中：</p>
+<ul>
+<li><span class="math inline">\(\sigma_y\)</span>：屈服强度</li>
+<li>$ _0 $：常数（晶内阻力）</li>
+<li><span class="math inline">\(k\)</span>：材料常数</li>
+<li><span class="math inline">\(d\)</span>：平均晶粒直径</li>
+</ul>
+<h3 id="影响机理">影响机理</h3>
+<ol type="1">
+<li>位错运动阻碍
+<ul>
+<li><strong>晶界</strong>阻碍位错滑移</li>
+<li><strong>应力集中</strong>难以传递</li>
+</ul></li>
+<li>变形协调性
+<ul>
+<li>细晶粒提供更多变形单元</li>
+<li>应力分布更均匀</li>
+</ul></li>
+<li>裂纹扩展阻力
+<ul>
+<li>晶界阻碍裂纹传播</li>
+<li>增加断裂能量吸收</li>
+</ul></li>
+</ol>
+<h3 id="细化晶粒的方法">细化晶粒的方法</h3>
+<ol type="1">
+<li>热处理方法
+<ul>
+<li>正火处理</li>
+<li>退火处理</li>
+<li>快速冷却</li>
+<li>正火处理
+<ul>
+<li>加热到奥氏体区（850-900℃）</li>
+<li>空冷，冷却速度适中</li>
+<li>获得珠光体组织</li>
+<li>改善组织均匀性</li>
+</ul></li>
+<li>退火处理
+<ul>
+<li>完全退火：加热至AC3上30-50℃</li>
+<li>缓慢冷却（炉冷）</li>
+<li>获得珠光体组织</li>
+<li>降低硬度，改善切削性能</li>
+</ul></li>
+<li>淬火处理
+<ul>
+<li>加热至奥氏体化温度</li>
+<li>快速冷却（水冷、油冷）</li>
+<li>形成马氏体组织</li>
+</ul></li>
+</ul></li>
+<li>机械加工
+<ul>
+<li>冷变形
+<ul>
+<li>冷轧：室温下板材压延
+<ul>
+<li>冷拉：室温下线材拉伸
+<ul>
+<li>冷锻：室温下压制成形</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>热变形
+<ul>
+<li>热轧：高温下板材轧制
+<ul>
+<li>热锻：高温下自由锻造
+<ul>
+<li>热挤压：高温下型材挤压</li>
+</ul></li>
+<li>循环变形</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>合金化处理
+<ul>
+<li>添加细化剂
+<ul>
+<li>Al合金中加入Ti、B细化晶粒</li>
+<li>钢中加入V、Nb、Ti控制奥氏体晶粒长大</li>
+</ul></li>
+<li>合金元素控制
+<ul>
+<li>钢中加入Mn提高淬透性</li>
+<li>Cu合金中加入Sn改善性能</li>
+</ul></li>
+<li>形成第二相粒子
+<ul>
+<li>Al合金中形成Al3Ti、TiB2析出相</li>
+<li>钢中形成碳化物、氮化物细化晶粒</li>
+</ul></li>
+</ul></li>
+<li>控制凝固条件
+<ul>
+<li>提高冷却速度</li>
+<li>施加外场（超声、电磁场）</li>
+<li>控制结晶核心数量</li>
+</ul></li>
+</ol>
+<h2 id="简述含碳量对钢的强度硬度塑性的影响">简述含碳量对钢的强度，硬度，塑性的影响</h2>
+<h3 id="含碳量的影响">含碳量的影响</h3>
+<h4 id="强度和硬度">强度和硬度</h4>
+<ul>
+<li>随碳含量增加而提高</li>
+<li>碳含量0.8%时达到最大值</li>
+<li>主要原因是碳化物强化作用</li>
+</ul>
+<h4 id="塑性和韧性">塑性和韧性</h4>
+<ul>
+<li>随碳含量增加而降低</li>
+<li>延伸率和断面收缩率减小</li>
+<li>冲击韧性显著下降</li>
+</ul>
+<h3 id="影响机理-1">影响机理</h3>
+<ol type="1">
+<li>碳化物形成
+<ul>
+<li>形成硬质第二相</li>
+<li>阻碍位错运动</li>
+<li>增强基体强度</li>
+</ul></li>
+<li>组织变化
+<ul>
+<li>影响铁素体与珠光体比例</li>
+<li>改变晶粒大小和分布</li>
+<li>影响相变特性</li>
+</ul></li>
+</ol>
+<h3 id="实际应用">实际应用</h3>
+<ul>
+<li>低碳钢（&lt;0.25%C）：塑性好，易加工</li>
+<li>中碳钢（0.25-0.6%C）：强度和塑性平衡</li>
+<li>高碳钢（&gt;0.6%C）：高强度，耐磨性好</li>
+</ul>
+<h2 id="拉深过程可能存在哪些缺陷如何防止">拉深过程可能存在哪些缺陷，如何防止？</h2>
+<h3 id="常见缺陷">常见缺陷</h3>
+<ol type="1">
+<li><strong><em>起皱缺陷</em></strong>
+<ul>
+<li>压边力不足</li>
+<li>板料过薄</li>
+<li>毛坯尺寸不当</li>
+</ul></li>
+<li>破裂缺陷
+<ul>
+<li>压边力过大</li>
+<li>润滑不良</li>
+<li>材料塑性不足</li>
+</ul></li>
+<li>耳边缺陷
+<ul>
+<li>材料异向性</li>
+<li>毛坯切割方向不当</li>
+<li>压边力分布不均</li>
+</ul></li>
+<li>表面划伤
+<ul>
+<li>模具表面粗糙</li>
+<li>润滑不足</li>
+<li>杂质干扰</li>
+</ul></li>
+</ol>
+<h3 id="预防措施">预防措施</h3>
+<ol type="1">
+<li>工艺优化
+<ul>
+<li>合理选择压边力</li>
+<li>优化拉深比</li>
+<li>多道次拉深</li>
+</ul></li>
+<li>材料控制
+<ul>
+<li>选用适当板材</li>
+<li>控制材料方向性</li>
+<li>确保材料质量</li>
+</ul></li>
+<li>润滑改善
+<ul>
+<li>选择合适润滑剂</li>
+<li>保持润滑均匀</li>
+<li>定期清理模具</li>
+</ul></li>
+<li>模具维护
+<ul>
+<li>定期检查模具</li>
+<li>保持表面光洁度</li>
+<li>及时修复损伤</li>
+</ul></li>
+</ol>
+<h2 id="简述反映系统的组成以及传感器的选用原则用ditaa画出组成图">简述反映系统的组成，以及传感器的选用原则，用ditaa画出组成图</h2>
+<h3 id="反映系统组成">反映系统组成</h3>
+<div class="mermaid">graph LR
+    A[传感器] --&gt; B[信号调理]
+    B --&gt; C[数据处理]    
+    C --&gt; D[执行器]</div>
+<h3 id="主要组成部分">主要组成部分</h3>
+<ol type="1">
+<li>传感器：感知外界信息</li>
+<li>信号调理：放大、滤波、转换</li>
+<li>数据处理：计算、分析、决策</li>
+<li>执行器：执行控制命令</li>
+</ol>
+<h3 id="传感器选用原则">传感器选用原则</h3>
+<ol type="1">
+<li>技术要求
+<ul>
+<li>测量范围适当</li>
+<li>精度满足需求</li>
+<li>响应速度合适</li>
+</ul></li>
+<li>环境适应性
+<ul>
+<li>温度范围</li>
+<li>防护等级</li>
+<li>抗干扰能力</li>
+</ul></li>
+<li>经济性考虑
+<ul>
+<li>购置成本</li>
+<li>维护费用</li>
+<li>使用寿命</li>
+</ul></li>
+<li>可靠性要求
+<ul>
+<li>稳定性好</li>
+<li>重复性高</li>
+<li>故障率低</li>
+</ul></li>
+</ol>
+<h2 id="增材减材恒材加工的特点及应用领域">增材,减材,恒材加工的特点及应用领域</h2>
+<h3 id="三种加工方法比较">三种加工方法比较</h3>
+<h4 id="增材加工-1">增材加工</h4>
+<ol type="1">
+<li>特点
+<ul>
+<li>逐层累加成形</li>
+<li>材料利用率高</li>
+<li>可制造复杂结构</li>
+<li>个性化定制方便</li>
+</ul></li>
+<li>应用领域
+<ul>
+<li>3D打印技术
+<ul>
+<li>FDM（熔融沉积）：塑料原型</li>
+<li>SLA（光固化）：精密模型</li>
+<li>SLM（选择性激光熔化）：金属零件</li>
+</ul></li>
+<li>焊接堆焊</li>
+<li>涂层制备</li>
+</ul></li>
+</ol>
+<h4 id="减材加工-1">减材加工</h4>
+<ol type="1">
+<li>特点
+<ul>
+<li>去除多余材料</li>
+<li>精度较高</li>
+<li>表面质量好</li>
+<li>材料损耗大</li>
+</ul></li>
+<li>应用领域
+<ul>
+<li>传统机械加工
+<ul>
+<li>车削：轴类零件</li>
+<li>铣削：型腔加工</li>
+<li>磨削：精密表面</li>
+</ul></li>
+<li>特种加工
+<ul>
+<li>激光切割</li>
+<li>线切割</li>
+<li>化学蚀刻</li>
+</ul></li>
+</ul></li>
+</ol>
+<h4 id="恒材加工-1">恒材加工</h4>
+<ol type="1">
+<li>特点
+<ul>
+<li>材料体积不变</li>
+<li>形状发生改变</li>
+<li>生产效率高</li>
+<li>批量化生产</li>
+</ul></li>
+<li>应用领域
+<ul>
+<li>塑性成形
+<ul>
+<li>锻造：曲轴、齿轮</li>
+<li>冲压：车身板件</li>
+<li>挤压：型材制品</li>
+</ul></li>
+<li>粉末成形
+<ul>
+<li>粉末冶金 陶瓷成形</li>
+</ul></li>
+</ul></li>
+</ol>
+<h2 id="简述沖裁的断面特征断面特征的产生断面质量好的标准是什么或者焊接残余变形的种类及焊后矫正的措施">简述沖裁的断面特征,断面特征的产生,断面质量好的标准是什么?或者焊接残余变形的种类及焊后矫正的措施</h2>
+<h3 id="冲裁断面特征">冲裁断面特征</h3>
+<h4 id="断面特征分区">断面特征分区</h4>
+<ol type="1">
+<li><strong>光滑带(光亮带(质量最佳))</strong>
+<ul>
+<li>位于上部</li>
+<li>表面光洁平整</li>
+<li>由材料弹性变形产生</li>
+</ul></li>
+<li>剪切带
+<ul>
+<li>位于中部</li>
+<li>呈现剪切痕迹</li>
+<li>由塑性变形形成</li>
+</ul></li>
+<li>撕裂带
+<ul>
+<li>位于下部</li>
+<li>表面粗糙</li>
+<li>由材料断裂造成</li>
+</ul></li>
+<li>毛刺
+<ul>
+<li>出现在底部边缘</li>
+<li>影响零件质量</li>
+<li>需要后续处理</li>
+</ul></li>
+</ol>
+<h3 id="断面形成机理">断面形成机理</h3>
+<ol type="1">
+<li>弹性变形阶段
+<ul>
+<li>材料受压产生弹性变形</li>
+<li>形成光滑带</li>
+</ul></li>
+<li>塑性变形阶段
+<ul>
+<li>材料开始塑性流动</li>
+<li>产生剪切带</li>
+</ul></li>
+<li>断裂阶段
+<ul>
+<li>材料承受极限应力</li>
+<li>形成撕裂带</li>
+</ul></li>
+</ol>
+<h3 id="断面质量标准">断面质量标准</h3>
+<ol type="1">
+<li>光滑带比例
+<ul>
+<li>理想状态占30-40%</li>
+<li>比例过大表示间隙过大</li>
+<li>比例过小表示间隙不足</li>
+</ul></li>
+<li>表面粗糙度
+<ul>
+<li>光滑带Ra≤3.2μm</li>
+<li>剪切带Ra≤6.3μm</li>
+<li>撕裂带Ra≤12.5μm</li>
+</ul></li>
+<li>垂直度
+<ul>
+<li>断面垂直度偏差≤0.1mm</li>
+<li>避免明显倾斜</li>
+</ul></li>
+<li>毛刺控制
+<ul>
+<li>毛刺高度≤0.1mm</li>
+<li>边缘整洁无缺口</li>
+</ul></li>
+</ol>
+<h3 id="焊接残余变形种类">焊接残余变形种类</h3>
+<h4 id="横向变形">横向变形</h4>
+<ul>
+<li>垂直于焊缝方向</li>
+<li>由<strong><em>横向收缩</em></strong>引起</li>
+<li>影响装配精度</li>
+</ul>
+<h4 id="纵向变形">纵向变形</h4>
+<ul>
+<li>平行于焊缝方向</li>
+<li>由<strong><em>纵向收缩</em></strong>造成</li>
+<li>导构件弯曲</li>
+</ul>
+<h4 id="角变形">角变形</h4>
+<ul>
+<li>焊缝两侧成角度</li>
+<li>由不均匀收缩产生</li>
+<li>影响平面度</li>
+</ul>
+<h4 id="扭曲变形">扭曲变形</h4>
+<ul>
+<li>构件整体扭转</li>
+<li>由复杂应力造成</li>
+<li>降低结构稳定性</li>
+</ul>
+<h3 id="矫正措施">矫正措施</h3>
+<h4 id="机械矫正">机械矫正</h4>
+<ol type="1">
+<li>冷矫正
+<ul>
+<li>压力矫正</li>
+<li>锤击矫正</li>
+<li>辊压矫正</li>
+</ul></li>
+<li>热矫正
+<ul>
+<li>点热法</li>
+<li>楔形加热法</li>
+<li>火焰矫正</li>
+</ul></li>
+</ol>
+<h4 id="预防措施-1">预防措施</h4>
+<ol type="1">
+<li>合理设计
+<ul>
+<li>优化焊接工艺</li>
+<li>控制焊接顺序</li>
+<li>使用定位工装</li>
+</ul></li>
+<li>工艺控制
+<ul>
+<li>预热处理</li>
+<li>控制热输入 -分段焊接</li>
+</ul></li>
+</ol>
+<h2 id="选择适合锉刀和轴的材料t1045钢zl250q235cr12wovcr10t12说明排号意义及常用领域">选择适合锉刀和轴的材料(T10,45钢,ZL250,Q235,Cr12WoV,Cr10,T12)说明排号意义及常用领域</h2>
+<h3 id="材料选择">材料选择</h3>
+<h4 id="锉刀材料选择">锉刀材料选择</h4>
+<ul>
+<li>T10、T12、Cr12WoV 最适合</li>
+<li>原因：高硬度、耐磨性好、韧性适中</li>
+</ul>
+<h4 id="轴材料选择">轴材料选择</h4>
+<ul>
+<li>45钢最适合</li>
+<li>原因：强度适中、加工性能好、成本低</li>
+</ul>
+<h3 id="材料编号说明">材料编号说明</h3>
+<h4 id="工具钢t系列">工具钢（T系列）</h4>
+<ul>
+<li>T10：含碳1.0%的工具钢</li>
+<li>T12：含碳1.2%的工具钢</li>
+<li>主要用途：切削工具、模具</li>
+</ul>
+<h4 id="合金钢cr系列">合金钢（Cr系列）</h4>
+<ul>
+<li>Cr12WoV：12%铬、含钨、钒的高合金工具钢</li>
+<li>Cr10：10%铬合金钢</li>
+<li>应用：模具、刀具、量具</li>
+</ul>
+<h4 id="结构钢">结构钢</h4>
+<ul>
+<li>45钢：含碳0.45%的中碳钢</li>
+<li>Q235：屈服强度235MPa的普通碳素钢</li>
+<li>用途：机械零件、建筑结构</li>
+</ul>
+<h4 id="铝合金">铝合金</h4>
+<ul>
+<li>ZL250：铸造铝合金</li>
+<li>应用：铸造件、机械外壳</li>
+</ul>
+<h2 id="写出两种cad软件详细介绍其中一个的主要功能和应用">写出两种CAD软件,详细介绍其中一个的主要功能和应用</h2>
+<h3 id="常见cad软件">常见CAD软件</h3>
+<ol type="1">
+<li>AutoCAD</li>
+<li>SolidWorks</li>
+</ol>
+<h3 id="autocad详细介绍">AutoCAD详细介绍</h3>
+<h3 id="开发语言和脚本">开发语言和脚本</h3>
+<ol type="1">
+<li>主要开发语言
+<ul>
+<li>C++：核心功能开发</li>
+<li>.NET Framework：二次开发接口</li>
+<li>ObjectARX：深度定制开发</li>
+</ul></li>
+<li>脚本语言
+<ul>
+<li><strong>AutoLISP</strong>
+<ul>
+<li>最常用的脚本语言</li>
+<li>简单易学</li>
+<li>适合自动化任务</li>
+</ul></li>
+<li>VBA
+<ul>
+<li>Visual Basic for Applications</li>
+<li>图形界面开发</li>
+<li>数据处理能力强</li>
+</ul></li>
+<li>DCL
+<ul>
+<li>Dialog Control Language</li>
+<li>对话框设计</li>
+<li>用户界面开发</li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong><em>3. 宏命令 - Script脚本</em></strong> - Command脚本 -
+Action Recorder录制</p>
+<h4 id="主要功能">主要功能</h4>
+<ol type="1">
+<li>二维绘图
+<ul>
+<li>直线、圆弧、多边形等基本图形</li>
+<li>图层管理</li>
+<li>标注系统</li>
+<li>坐标系统</li>
+</ul></li>
+<li>三维建模
+<ul>
+<li>实体建模</li>
+<li>曲面建模</li>
+<li>网格建模</li>
+<li>渲染功能</li>
+</ul></li>
+<li>编辑功能
+<ul>
+<li>移动、复制、镜像</li>
+<li>修剪、延伸、倒角</li>
+<li>阵列、缩放</li>
+<li>图块管理</li>
+</ul></li>
+</ol>
+<h4 id="应用领域">应用领域</h4>
+<ol type="1">
+<li>建筑设计
+<ul>
+<li>建筑平面图</li>
+<li>立面图</li>
+<li>剖面图</li>
+<li>施工图</li>
+</ul></li>
+<li>机械制图
+<ul>
+<li>零件图</li>
+<li>装配图</li>
+<li>工程图纸</li>
+<li>模具设计</li>
+</ul></li>
+<li>工业设计
+<ul>
+<li>产品设计</li>
+<li>工艺布局</li>
+<li>管道设计</li>
+</ul></li>
+</ol>
 <h1 id="思考题">思考题:</h1>
 <ul>
 <li>1.硬件是CAD/CAM 系统运行的物质基础，主要由哪几部分组成?</li>
@@ -2185,6 +2614,57 @@ ul ul .md-sidebar-toc .md-toc-link {
 <li>综合系统</li>
 </ul></li>
 </ol>
+<h1 id="实习可能问的题目">实习可能问的题目</h1>
+<h2 id="中唯实业-畅通-骥驰">中唯实业、畅通、骥驰</h2>
+<p>2023 年 8 月 – 2023 年 9 月 •
+了解消失模的生产原理与生产过程;等离子切割机、立式加工中心等设备的操作过程。
+• 学习了消失模铸造工艺全流程，包括模具设计、发泡、涂料、浇注等环节 •
+掌握等离子切割机的基本操作，参与金属板材的切割工作 •
+在立式加工中心上进行零件加工，熟悉数控编程和刀具选择</p>
+<h3 id="等离子切割机介绍">等离子切割机介绍</h3>
+<p>• 等离子切割机是通过高温电弧使气体电离形成等离子体进行切割的设备 •
+主要用于切割导电金属材料，如碳钢、不锈钢和铝合金等 •
+切割速度快，切口平整，热影响区小，适合各种厚度的金属板材加工 •
+设备主要由等离子电源、切割枪、气源系统和数控系统组成 •
+在实习中主要进行了以下操作： - 工件图纸导入与切割程序编制 -
+切割参数设置（如气压、电流、切割速度等） -
+实际板材切割操作与质量控制</p>
+<h3 id="立式加工中心介绍">立式加工中心介绍</h3>
+<pre class="language-text">• 立式加工中心是一种数控机床，主轴垂直于工作台面
+• 设备具备自动换刀功能，可进行铣削、钻孔、攻丝等多种加工
+• 主要组成部分：
+    - 机床本体和工作台
+    - 数控系统（CNC）
+    - 刀库和自动换刀装置
+    - 冷却润滑系统
+• 实习期间主要工作：
+    - 学习G代码编程基础
+    - 进行工件装夹和对刀
+    - 执行简单零件加工任务
+    - 掌握常用刀具的选择方法</pre>
+<h2 id="中国一重集团公司">中国一重集团公司</h2>
+<p>2024 年 7 月 – 2024 年 8 月 •
+在工艺技术部了解热处理方法、热处理厂了解热处理工艺流程;着重在水压机锻厂学习锻造方法、
+锻造设备、锻造生产;
+铸造厂、炼钢厂、铸铁轧辊厂、模型厂围绕轧辊的生产,学习铸钢件模具制
+造、造型、浇注等工艺流程。</p>
+<h3 id="轧辊生产流程">轧辊生产流程</h3>
+<p>• 轧辊生产主要包含以下环节： - 模具制造：根据轧辊尺寸设计和制作模具 -
+造型制芯：制作砂型和型芯，确保尺寸精度 -
+熔炼：在炼钢厂进行原材料熔炼，控制成分 -
+浇注：将液态金属注入砂型，形成毛坯 -
+热处理：进行调质处理，提高强度和硬度 -
+机械加工：车削、磨削等工序，达到尺寸要求 -
+质量检测：进行硬度、金相等检验</p>
+<p>• 生产特点： - 全流程质量控制，确保轧辊性能 - 工艺复杂，制造周期长 -
+需要多个车间协同配合 - 质量要求高，检测标准严格</p>
+<h3 id="主要设备介绍">主要设备介绍</h3>
+<p>• 熔炼设备： - 电弧炉：用于钢材熔炼，容量50-100吨 -
+精炼炉：进行二次精炼，提高钢水纯净度</p>
+<p>• 热处理设备： - 台车式热处理炉：用于轧辊调质处理 -
+淬火机：实现轧辊表面快速冷却</p>
+<p>• 机加工设备： - 数控重型车床：加工轧辊外圆和端面 -
+数控磨床：精加工轧辊表面 - 深孔钻：加工轧辊中心孔</p>
 
       </div>
       <div class="md-sidebar-toc">
@@ -2224,7 +2704,7 @@ ul ul .md-sidebar-toc .md-toc-link {
       </details>
     <details style="padding:0;;padding-left:0px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#什么是加工硬化原因对金属的影响" class="md-toc-link"><p>什么是加工硬化？原因？对金属的影响。</p>
+          <a href="#什么是加工硬化原因对金属的影响" class="md-toc-link"><p>什么是加工硬化？原因？对金属的影响</p>
 </a>
           </summary>
         <div>
@@ -2353,7 +2833,7 @@ ul ul .md-sidebar-toc .md-toc-link {
       </details>
     <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#说明增材恒材减材加工的特点举例说明各自的实际应用领域" class="md-toc-link"><p>说明增材，恒材，减材加工的特点，举例说明各自的实际应用领域。</p>
+          <a href="#说明增材恒材减材加工的特点举例说明各自的实际应用领域" class="md-toc-link"><p>说明增材，恒材，减材加工的特点，举例说明各自的实际应用领域</p>
 </a>
           </summary>
         <div>
@@ -2374,7 +2854,7 @@ ul ul .md-sidebar-toc .md-toc-link {
       </details>
     <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#简形件拉深的过程中易产生哪些缺陷以及如何防止或简述焊接残余变形的分类并提出焊后矫正焊接残余变形的措施" class="md-toc-link"><p>简形件拉深的过程中易产生哪些缺陷？以及如何防止或简述焊接残余变形的分类，并提出焊后矫正焊接残余变形的措施。</p>
+          <a href="#简形件拉深的过程中易产生哪些缺陷以及如何防止或简述焊接残余变形的分类并提出焊后矫正焊接残余变形的措施" class="md-toc-link"><p>简形件拉深的过程中易产生哪些缺陷？以及如何防止或简述焊接残余变形的分类，并提出焊后矫正焊接残余变形的措施</p>
 </a>
           </summary>
         <div>
@@ -2395,7 +2875,7 @@ ul ul .md-sidebar-toc .md-toc-link {
       </details>
     <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#说明cadcam的中文意思简述cadcam系统的组成部分说明auto-cad-ug-软件-proengineer-软件属于cadcam系统中哪一部分" class="md-toc-link"><p>说明CAD/CAM的中文意思；简述CAD/CAM系统的组成部分；说明Auto-CAD、UG 软件、Pro/ENGINEER 软件属于CAD/CAM系统中哪一部分。</p>
+          <a href="#说明cadcam的中文意思简述cadcam系统的组成部分说明auto-cad-ug-软件-proengineer-软件属于cadcam系统中哪一部分" class="md-toc-link"><p>说明CAD/CAM的中文意思；简述CAD/CAM系统的组成部分；说明Auto-CAD、UG 软件、Pro/ENGINEER 软件属于CAD/CAM系统中哪一部分</p>
 </a>
           </summary>
         <div>
@@ -2412,7 +2892,7 @@ ul ul .md-sidebar-toc .md-toc-link {
       </details>
     <details style="padding:0;;padding-left:24px;" open="">
         <summary class="md-toc-link-wrapper">
-          <a href="#数值模拟可以用在材料成型领域的产品设计和性能预测请结合实例介绍如何使用和数值模拟的优势" class="md-toc-link"><p>数值模拟可以用在材料成型领域的产品设计和性能预测，请结合实例介绍如何使用和数值模拟的优势。</p>
+          <a href="#数值模拟可以用在材料成型领域的产品设计和性能预测请结合实例介绍如何使用和数值模拟的优势" class="md-toc-link"><p>数值模拟可以用在材料成型领域的产品设计和性能预测，请结合实例介绍如何使用和数值模拟的优势</p>
 </a>
           </summary>
         <div>
@@ -2485,6 +2965,332 @@ ul ul .md-sidebar-toc .md-toc-link {
     
         </div>
       </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#section" class="md-toc-link"><p>2023</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#晶体缺陷类型有哪几种如何利用和消除" class="md-toc-link"><p>晶体缺陷类型有哪几种？如何利用和消除？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#点缺陷" class="md-toc-link">
+            <p>点缺陷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#线缺陷" class="md-toc-link">
+            <p>线缺陷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#面缺陷" class="md-toc-link">
+            <p>面缺陷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#体缺陷" class="md-toc-link">
+            <p>体缺陷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#利用方式" class="md-toc-link">
+            <p>利用方式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#消除方法" class="md-toc-link">
+            <p>消除方法</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#简述晶粒大小对力学性能的影响如何细化晶粒" class="md-toc-link"><p>简述晶粒大小对力学性能的影响，如何细化晶粒？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#晶粒大小的影响" class="md-toc-link">
+            <p>晶粒大小的影响</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#hall-petch关系" class="md-toc-link">
+            <p>Hall-Petch关系</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#影响机理" class="md-toc-link">
+            <p>影响机理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#细化晶粒的方法" class="md-toc-link">
+            <p>细化晶粒的方法</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#简述含碳量对钢的强度硬度塑性的影响" class="md-toc-link"><p>简述含碳量对钢的强度，硬度，塑性的影响</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#含碳量的影响" class="md-toc-link"><p>含碳量的影响</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#强度和硬度" class="md-toc-link">
+            <p>强度和硬度</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#塑性和韧性" class="md-toc-link">
+            <p>塑性和韧性</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#影响机理-1" class="md-toc-link">
+            <p>影响机理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#实际应用" class="md-toc-link">
+            <p>实际应用</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#拉深过程可能存在哪些缺陷如何防止" class="md-toc-link"><p>拉深过程可能存在哪些缺陷，如何防止？</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#常见缺陷" class="md-toc-link">
+            <p>常见缺陷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#预防措施" class="md-toc-link">
+            <p>预防措施</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#简述反映系统的组成以及传感器的选用原则用ditaa画出组成图" class="md-toc-link"><p>简述反映系统的组成，以及传感器的选用原则，用ditaa画出组成图</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#反映系统组成" class="md-toc-link">
+            <p>反映系统组成</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主要组成部分" class="md-toc-link">
+            <p>主要组成部分</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#传感器选用原则" class="md-toc-link">
+            <p>传感器选用原则</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#增材减材恒材加工的特点及应用领域" class="md-toc-link"><p>增材,减材,恒材加工的特点及应用领域</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三种加工方法比较" class="md-toc-link"><p>三种加工方法比较</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#增材加工-1" class="md-toc-link">
+            <p>增材加工</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#减材加工-1" class="md-toc-link">
+            <p>减材加工</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#恒材加工-1" class="md-toc-link">
+            <p>恒材加工</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#简述沖裁的断面特征断面特征的产生断面质量好的标准是什么或者焊接残余变形的种类及焊后矫正的措施" class="md-toc-link"><p>简述沖裁的断面特征,断面特征的产生,断面质量好的标准是什么?或者焊接残余变形的种类及焊后矫正的措施</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#冲裁断面特征" class="md-toc-link"><p>冲裁断面特征</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#断面特征分区" class="md-toc-link">
+            <p>断面特征分区</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#断面形成机理" class="md-toc-link">
+            <p>断面形成机理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#断面质量标准" class="md-toc-link">
+            <p>断面质量标准</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#焊接残余变形种类" class="md-toc-link"><p>焊接残余变形种类</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#横向变形" class="md-toc-link">
+            <p>横向变形</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#纵向变形" class="md-toc-link">
+            <p>纵向变形</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#角变形" class="md-toc-link">
+            <p>角变形</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#扭曲变形" class="md-toc-link">
+            <p>扭曲变形</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#矫正措施" class="md-toc-link"><p>矫正措施</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#机械矫正" class="md-toc-link">
+            <p>机械矫正</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#预防措施-1" class="md-toc-link">
+            <p>预防措施</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#选择适合锉刀和轴的材料t1045钢zl250q235cr12wovcr10t12说明排号意义及常用领域" class="md-toc-link"><p>选择适合锉刀和轴的材料(T10,45钢,ZL250,Q235,Cr12WoV,Cr10,T12)说明排号意义及常用领域</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#材料选择" class="md-toc-link"><p>材料选择</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#锉刀材料选择" class="md-toc-link">
+            <p>锉刀材料选择</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#轴材料选择" class="md-toc-link">
+            <p>轴材料选择</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#材料编号说明" class="md-toc-link"><p>材料编号说明</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#工具钢t系列" class="md-toc-link">
+            <p>工具钢（T系列）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#合金钢cr系列" class="md-toc-link">
+            <p>合金钢（Cr系列）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#结构钢" class="md-toc-link">
+            <p>结构钢</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#铝合金" class="md-toc-link">
+            <p>铝合金</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#写出两种cad软件详细介绍其中一个的主要功能和应用" class="md-toc-link"><p>写出两种CAD软件,详细介绍其中一个的主要功能和应用</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#常见cad软件" class="md-toc-link">
+            <p>常见CAD软件</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#autocad详细介绍" class="md-toc-link">
+            <p>AutoCAD详细介绍</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#开发语言和脚本" class="md-toc-link"><p>开发语言和脚本</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主要功能" class="md-toc-link">
+            <p>主要功能</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#应用领域" class="md-toc-link">
+            <p>应用领域</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
     <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
           <a href="#思考题" class="md-toc-link">
             <p>思考题:</p>
@@ -2493,7 +3299,50 @@ ul ul .md-sidebar-toc .md-toc-link {
           <a href="#答案" class="md-toc-link">
             <p>答案：</p>
 
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#实习可能问的题目" class="md-toc-link"><p>实习可能问的题目</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#中唯实业-畅通-骥驰" class="md-toc-link"><p>中唯实业、畅通、骥驰</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#等离子切割机介绍" class="md-toc-link">
+            <p>等离子切割机介绍</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#立式加工中心介绍" class="md-toc-link">
+            <p>立式加工中心介绍</p>
+
           </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#中国一重集团公司" class="md-toc-link"><p>中国一重集团公司</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#轧辊生产流程" class="md-toc-link">
+            <p>轧辊生产流程</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#主要设备介绍" class="md-toc-link">
+            <p>主要设备介绍</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
 </div>
 </div>
       <a id="sidebar-toc-btn">≡</a>
