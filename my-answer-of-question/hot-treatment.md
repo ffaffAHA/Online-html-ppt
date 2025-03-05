@@ -2,17 +2,24 @@
 
 ![](https://cdn.jsdelivr.net/gh/ffaffAHA/picx-images-hosting@master/PicGo/202503021807422.png)
 
-## 与钢比较，灰口铸铁的组织和性能有什么特点？石墨的数量、形态、大小和基体组织对灰口铸铁的性能有什么影响？
+![](https://picx.bailanyun.cn/PicGo/202503021320300.png)
 
-- 灰口铸铁组织：钢基体+石墨
-
-- 性能特点：灰口铸铁力学性能取决于钢基体和石墨的性能、数量、大小、形状和分布等因素。灰口铸铁的抗拉强度、塑性、韧性都比钢低。
-
-- 影响：（1）石墨G的强度、韧性极低，松软而脆弱，石墨相当于钢基体中的裂纹或孔洞，石墨越多，对基体的削弱和割裂作用越严重，应力集中程度越大，所以灰口铸铁的抗拉强度、塑性、韧性都较低。
-（2）石墨片粗大，局部承载面积减少，力学性能下降；石墨片过细，应力集中程度增加，力学性能也降低；石墨片尺寸应以中等大小为宜。
-（3）石墨形态对应力集中十分敏感，由灰口铸铁—蠕墨铸铁—可锻铸铁—球墨铸铁，G对基体的割裂作用逐渐减小，因此强度、塑性不断提高。
-（4）基体组织对铸铁的力学性能也起着重要的作用。当基体组织为F、P和F+P时：F越多，铸铁塑性越好；P越多，铸铁的抗拉强度和硬度越高。
-- 强化途径
-    （1）改善石墨形态：如变质处理，使石墨**细化**；球化处理，是石墨**球形化**
-
-    （2）基体热处理、合金化等
+![](https://picx.bailanyun.cn/PicGo/202503021835599.png)
+![](https://picx.bailanyun.cn/PicGo/202503021845745.png)
+![](https://picx.bailanyun.cn/PicGo/202503021856826.png)
+![](https://picx.bailanyun.cn/PicGo/202503021901539.png)
+![](https://picx.bailanyun.cn/PicGo/202503030750562.png)
+![](https://picx.bailanyun.cn/PicGo/202503021900044.png)
+![](https://picx.bailanyun.cn/PicGo/202503030753441.png)
+![](https://picx.bailanyun.cn/PicGo/202503030803592.png)
+![](https://picx.bailanyun.cn/PicGo/202503030806561.png)
+![](https://picx.bailanyun.cn/PicGo/202503030807146.png)
+![](https://picx.bailanyun.cn/PicGo/202503030808985.png)
+![](https://picx.bailanyun.cn/PicGo/202503030819685.png)
+![](https://picx.bailanyun.cn/PicGo/202503030819068.png)
+![](https://picx.bailanyun.cn/PicGo/202503030820796.png)
+![](https://picx.bailanyun.cn/PicGo/202503031535311.png)
+![](https://picx.bailanyun.cn/PicGo/202503031550178.png)
+![](https://picx.bailanyun.cn/PicGo/202503031551355.png)
+![](https://picx.bailanyun.cn/PicGo/202503031606713.png)
+![](https://picx.bailanyun.cn/PicGo/202503031620243.png)
