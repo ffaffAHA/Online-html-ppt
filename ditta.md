@@ -1,4 +1,4 @@
-```ditaa {kroki=true}
+```ditaa {kroki}
 +--------+   +-------+    +-------+
 |        | --+ ditaa +--> |       |
 |  Text  |   +-------+    |diagram|
