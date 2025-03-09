@@ -77,6 +77,13 @@ In conclusion, controlling heat accumulation and scanning speed can enhance SLM 
     <source src="image/english/1741512918356.mp3" type="audio/mp3"></source>
 </audio>
 
+慢x0.8
+
+<audio controls="controls" loop="loop">
+    <source src="image/english/1741518099592.mp3" type="audio/mp3"></source>
+</audio>
+
+
 以下是针对优化后文本的逐句背诵训练法，采用「分块记忆+联想定位」的科学记忆策略：
 
 ---
